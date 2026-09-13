@@ -32,3 +32,21 @@ button {
     border: 0;
     border-radius: 999px;
 }
+.lokasi-info{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.lokasi-info div{
+    min-width: 250px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.lokasi-info h3{
+    margin-bottom: 10px;
+}
