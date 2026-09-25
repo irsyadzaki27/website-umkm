@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kopi Nusa - Website UMKM</title>
+
+    <!-- Menghubungkan HTML dengan CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
@@ -15,54 +18,89 @@
         Lewati ke konten utama
     </a>
 
-    <!-- Bagian kepala halaman dan navigasi -->
+
+    <!-- =========================================
+         BAGIAN KEPALA HALAMAN DAN NAVIGASI
+         ========================================= -->
+
     <header class="site-header">
+
+        <!-- Nama / Brand Website -->
         <div class="brand">
             <a href="index.html">Kopi Nusa</a>
         </div>
 
+
         <!-- Navigasi Utama Website -->
         <nav aria-label="Navigasi utama">
+
             <ul class="nav-list">
 
-                <!-- Halaman yang sedang dibuka -->
+                <!-- Menu Beranda -->
                 <li>
-                    <a href="index.html" aria-current="page">Beranda</a>
+                    <a href="index.html" aria-current="page">
+                        Beranda
+                    </a>
                 </li>
 
-                <!-- Menu menuju halaman Tentang Kami -->
+
+                <!-- Menu Tentang Kami -->
                 <li>
-                    <a href="tentang.html">Tentang Kami</a>
+                    <a href="tentang.html">
+                        Tentang Kami
+                    </a>
                 </li>
 
-                <!-- Menu menuju bagian profil -->
+
+                <!-- Menu Profil -->
                 <li>
-                    <a href="#profil">Profil</a>
+                    <a href="#profil">
+                        Profil
+                    </a>
                 </li>
 
-                <!-- Menu menuju bagian produk -->
+
+                <!-- Menu Produk -->
                 <li>
-                    <a href="#produk">Produk</a>
+                    <a href="#produk">
+                        Produk
+                    </a>
                 </li>
 
-                <!-- Menu menuju bagian lokasi -->
+
+                <!-- Menu Lokasi -->
                 <li>
-                    <a href="#lokasi">Lokasi</a>
+                    <a href="#lokasi">
+                        Lokasi
+                    </a>
                 </li>
 
-                <!-- Menu menuju bagian kontak -->
+
+                <!-- Menu Kontak -->
                 <li>
-                    <a href="#kontak">Kontak</a>
+                    <a href="kontak.html">
+                        Kontak
+                    </a>
                 </li>
 
             </ul>
+
         </nav>
+
     </header>
 
-    <!-- Isi utama halaman website -->
+
+    <!-- =========================================
+         ISI UTAMA HALAMAN
+         ========================================= -->
+
     <main id="konten-utama" class="page">
 
-        <!-- Pembuka Website / Profil -->
+
+        <!-- =========================================
+             PEMBUKA WEBSITE / PROFIL
+             ========================================= -->
+
         <section
             class="hero"
             id="profil"
@@ -70,118 +108,134 @@
 
             <div class="hero-content">
 
-                <h1 id="hero-title">Kopi Nusa</h1>
+                <h1 id="hero-title">
+                    Kopi Nusa
+                </h1>
 
                 <p>
                     Kopi lokal pilihan untuk teman belajar,
                     bekerja, dan berdiskusi.
                 </p>
 
-                <!-- Tombol yang akan menjalankan fungsi JavaScript -->
-                <button id="promoButton" type="button">
+
+                <!-- Tombol yang menjalankan JavaScript -->
+                <button
+                    id="promoButton"
+                    type="button">
+
                     Lihat Promo Hari Ini
+
                 </button>
 
             </div>
+
         </section>
 
-        <!-- Menampilkan produk -->
+
+        <!-- =========================================
+             PRODUK UNGGULAN
+             ========================================= -->
+
         <section
             id="produk"
             class="section"
             aria-labelledby="produk-title">
 
-            <h2 id="produk-title">Produk Unggulan</h2>
+            <h2 id="produk-title">
+                Produk Unggulan
+            </h2>
+
 
             <div class="products">
 
-                <!-- Setiap produk dibuat sebagai artikel -->
+
+                <!-- Produk 1 -->
                 <article class="product-card">
 
                     <img
                         src="IMG/kopi-garwo.jpg"
                         alt="Kopi Garwo Signature">
 
-                    <h3>Kopi Garwo Signature</h3>
+                    <h3>
+                        Kopi Garwo Signature
+                    </h3>
 
-                    <p>Rp20.000</p>
+                    <p>
+                        Rp20.000
+                    </p>
 
                 </article>
 
+
+                <!-- Produk 2 -->
                 <article class="product-card">
 
                     <img
                         src="IMG/americano-peach.jpg"
                         alt="Americano Peach">
 
-                    <h3>Americano Peach</h3>
+                    <h3>
+                        Americano Peach
+                    </h3>
 
-                    <p>Rp22.000</p>
+                    <p>
+                        Rp22.000
+                    </p>
 
                 </article>
 
             </div>
+
         </section>
 
-        <!-- Informasi lokasi dan jam buka -->
+
+        <!-- =========================================
+             INFORMASI LOKASI DAN JAM BUKA
+             ========================================= -->
+
         <section
             id="lokasi"
             class="section"
             aria-labelledby="lokasi-title">
 
-            <h2 id="lokasi-title">Lokasi &amp; Jam Buka</h2>
+            <h2 id="lokasi-title">
+                Lokasi &amp; Jam Buka
+            </h2>
 
             <p>
                 Alamat: Jl. Jendral Sudirman, Batang
             </p>
 
             <ul>
-                <li>Senin-Sabtu: 08.00-22.00</li>
-                <li>Minggu: 09.00-20.00</li>
+
+                <li>
+                    Senin-Sabtu: 08.00-22.00
+                </li>
+
+                <li>
+                    Minggu: 09.00-20.00
+                </li>
+
             </ul>
-
-        </section>
-
-        <!-- Informasi kontak UMKM -->
-        <section
-            id="kontak"
-            class="section"
-            aria-labelledby="kontak-title">
-
-            <h2 id="kontak-title">Kontak Singkat</h2>
-
-            <p>
-                Jika ingin bertanya atau melakukan pemesanan,
-                silakan hubungi Kopi Nusa melalui kontak berikut.
-            </p>
-
-            <p>
-                Kota: Batang, Jawa Tengah
-            </p>
-
-            <p>
-                Jam layanan: Senin-Sabtu, 08.00-22.00 WIB
-            </p>
-
-            <p>
-                Kanal kontak:
-                <a href="https://wa.me/082225126027">
-                    Hubungi Kopi Nusa melalui WhatsApp
-                </a>
-            </p>
 
         </section>
 
     </main>
 
-    <!-- Footer berisi informasi hak cipta website -->
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
     <footer class="site-footer">
 
         <p>
-            &copy; 2026 Kopi Nusa. Semua hak dilindungi.
+            &copy; 2026 Kopi Nusa.
+            Semua hak dilindungi.
         </p>
 
     </footer>
+
 
     <!-- Menghubungkan HTML dengan JavaScript -->
     <script src="JS/script.js"></script>
