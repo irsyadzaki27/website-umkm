@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Mengatur karakter yang digunakan pada halaman -->
+    <meta charset="UTF-8">
+
+    <!-- Membuat tampilan halaman menyesuaikan ukuran layar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul yang muncul pada tab browser -->
+    <title>Galeri - Kopi Nusa</title>
+
+    <!-- Menghubungkan halaman dengan file CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Link untuk melewati navigasi dan langsung menuju isi halaman -->
+    <a class="skip-link" href="#konten-utama">
+        Lewati ke konten utama
+    </a>
+
+    <!-- Bagian header berisi nama website dan navigasi -->
+    <header class="site-header">
+        <div class="page">
+
+            <!-- Nama website -->
+            <h1>Kopi Nusa</h1>
+
+            <!-- Navigasi utama website -->
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">Beranda</a>
+                    </li>
+
+                    <li>
+                        <a href="tentang.html">Tentang Kami</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#profil">Profil</a>
+                    </li>
+
+                    <li>
+                        <a href="produk.html">Produk</a>
+                    </li>
+
+                    <!-- Halaman yang sedang dibuka -->
+                    <li>
+                        <a href="galeri.html" aria-current="page">
+                            Galeri
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#lokasi">Lokasi</a>
+                    </li>
+
+                    <li>
+                        <a href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Isi utama halaman -->
+    <main id="konten-utama" class="page">
+
+        <!-- Bagian pembuka halaman galeri -->
+        <section class="hero">
+            <h2>Galeri Kopi Nusa</h2>
+
+            <p>
+                Berikut beberapa tampilan produk yang tersedia di Kopi Nusa.
+            </p>
+        </section>
+
+        <!-- Bagian yang menampilkan produk -->
+        <section>
+            <h2>Galeri Produk</h2>
+
+            <div class="products">
+
+                <!-- Produk pertama -->
+                <article class="product-card">
+                    <figure>
+                        <img src="IMG/kopi-garwo.jpg"
+                             alt="Segelas Kopi Garwo Signature dengan warna kopi susu">
+
+                        <figcaption>
+                            Kopi Garwo Signature - Rp20.000
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <!-- Produk kedua -->
+                <article class="product-card">
+                    <figure>
+                        <img src="IMG/americano-peach.jpg"
+                             alt="Minuman Americano Peach dengan warna oranye dan es batu">
+
+                        <figcaption>
+                            Americano Peach - Rp22.000
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <!-- Produk baru yang ditambahkan pada P03 -->
+                <article class="product-card">
+                    <figure>
+                        <img src="IMG/mojito.jpg"
+                             alt="Minuman mojito dengan irisan jeruk nipis, daun mint, dan es batu">
+
+                        <figcaption>
+                            Mojito - Rp18.000
+                        </figcaption>
+                    </figure>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bagian bawah website -->
+    <footer>
+        <div class="page">
+            <p>
+                &copy; 2026 Kopi Nusa. Semua hak dilindungi.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

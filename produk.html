@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul halaman -->
+    <title>Produk - Kopi Nusa</title>
+
+    <!-- Menghubungkan halaman dengan CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Skip link untuk membantu pengguna keyboard -->
+    <a class="skip-link" href="#konten-utama">
+        Lewati ke konten utama
+    </a>
+
+
+    <!-- Header dan navigasi utama -->
+    <header class="site-header">
+
+        <!-- Nama brand -->
+        <div class="brand">
+            <a href="index.html">
+                Kopi Nusa
+            </a>
+        </div>
+
+
+        <!-- Navigasi utama website -->
+        <nav aria-label="Navigasi utama">
+
+            <ul class="nav-list">
+
+                <!-- Menu Beranda -->
+                <li>
+                    <a href="index.html">
+                        Beranda
+                    </a>
+                </li>
+
+
+                <!-- Menu Tentang Kami -->
+                <li>
+                    <a href="tentang.html">
+                        Tentang Kami
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju bagian Profil di halaman utama -->
+                <li>
+                    <a href="index.html#profil">
+                        Profil
+                    </a>
+                </li>
+
+
+                <!-- Halaman yang sedang dibuka -->
+                <li>
+                    <a href="produk.html" aria-current="page">
+                        Produk
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju halaman Galeri -->
+                <li>
+                    <a href="galeri.html">
+                        Galeri
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju bagian Lokasi di halaman utama -->
+                <li>
+                    <a href="index.html#lokasi">
+                        Lokasi
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju halaman Kontak -->
+                <li>
+                    <a href="kontak.html">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Isi utama halaman Produk -->
+    <main id="konten-utama" class="page">
+
+        <!-- Judul halaman katalog -->
+        <section class="section" aria-labelledby="produk-title">
+
+            <h1 id="produk-title">
+                Katalog Produk Kopi Nusa
+            </h1>
+
+
+            <!-- Daftar produk -->
+            <div class="products">
+
+
+                <!-- Produk Kopi Garwo Signature -->
+                <article class="product-card">
+
+                    <figure>
+
+                        <img
+                            src="IMG/kopi-garwo.jpg"
+                            alt="Segelas Kopi Garwo Signature dengan warna kopi susu">
+
+                        <figcaption>
+                            Kopi Garwo Signature — Rp20.000
+                        </figcaption>
+
+                    </figure>
+
+                </article>
+
+
+                <!-- Produk Americano Peach -->
+                <article class="product-card">
+
+                    <figure>
+
+                        <img
+                            src="IMG/americano-peach.jpg"
+                            alt="Minuman Americano Peach dengan warna oranye dan es batu">
+
+                        <figcaption>
+                            Americano Peach — Rp22.000
+                        </figcaption>
+
+                    </figure>
+
+                </article>
+
+
+                <!-- Produk baru Mojito -->
+                <article class="product-card">
+
+                    <figure>
+
+                        <img
+                            src="IMG/mojito.jpg"
+                            alt="Minuman mojito segar dengan irisan jeruk nipis, daun mint, dan es batu">
+
+                        <figcaption>
+                            Mojito — Rp18.000
+                        </figcaption>
+
+                    </figure>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tabel katalog produk -->
+        <section class="section" aria-labelledby="tabel-produk-title">
+
+            <h2 id="tabel-produk-title">
+                Daftar Harga Produk
+            </h2>
+
+
+            <table>
+
+                <!-- Judul tabel -->
+                <caption>
+                    Daftar produk dan harga Kopi Nusa
+                </caption>
+
+
+                <!-- Bagian kepala tabel -->
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">
+                            Produk
+                        </th>
+
+                        <th scope="col">
+                            Harga
+                        </th>
+
+                        <th scope="col">
+                            Keterangan
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!-- Isi tabel -->
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Kopi Garwo Signature
+                        </td>
+
+                        <td>
+                            Rp20.000
+                        </td>
+
+                        <td>
+                            Kopi dengan cita rasa lembut
+                            dan cocok untuk menemani aktivitas.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Americano Peach
+                        </td>
+
+                        <td>
+                            Rp22.000
+                        </td>
+
+                        <td>
+                            Minuman kopi dengan perpaduan
+                            rasa americano dan peach.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Mojito
+                        </td>
+
+                        <td>
+                            Rp18.000
+                        </td>
+
+                        <td>
+                            Minuman segar dengan perpaduan
+                            jeruk nipis, daun mint, dan es.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer website -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Kopi Nusa.
+            Semua hak dilindungi.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

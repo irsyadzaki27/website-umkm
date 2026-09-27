@@ -5,38 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Judul yang tampil pada tab browser -->
     <title>Kopi Nusa - Website UMKM</title>
 
-    <!-- Menghubungkan HTML dengan CSS -->
+    <!-- Menghubungkan halaman dengan file CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-    <!-- Skip link untuk akses keyboard -->
+    <!--
+        Skip link membantu pengguna keyboard
+        langsung menuju isi utama halaman.
+    -->
     <a class="skip-link" href="#konten-utama">
         Lewati ke konten utama
     </a>
 
 
-    <!-- =========================================
-         BAGIAN KEPALA HALAMAN DAN NAVIGASI
-         ========================================= -->
-
+    <!-- Header berisi nama brand dan navigasi -->
     <header class="site-header">
 
-        <!-- Nama / Brand Website -->
+        <!-- Nama brand yang mengarah ke halaman utama -->
         <div class="brand">
-            <a href="index.html">Kopi Nusa</a>
+            <a href="index.html">
+                Kopi Nusa
+            </a>
         </div>
 
 
-        <!-- Navigasi Utama Website -->
+        <!-- Navigasi utama website -->
         <nav aria-label="Navigasi utama">
 
             <ul class="nav-list">
 
-                <!-- Menu Beranda -->
+                <!-- Halaman yang sedang dibuka -->
                 <li>
                     <a href="index.html" aria-current="page">
                         Beranda
@@ -44,7 +47,7 @@
                 </li>
 
 
-                <!-- Menu Tentang Kami -->
+                <!-- Menu menuju halaman Tentang Kami -->
                 <li>
                     <a href="tentang.html">
                         Tentang Kami
@@ -52,7 +55,7 @@
                 </li>
 
 
-                <!-- Menu Profil -->
+                <!-- Menu menuju bagian Profil di halaman Beranda -->
                 <li>
                     <a href="#profil">
                         Profil
@@ -60,15 +63,23 @@
                 </li>
 
 
-                <!-- Menu Produk -->
+                <!-- Menu menuju halaman katalog produk -->
                 <li>
-                    <a href="#produk">
+                    <a href="produk.html">
                         Produk
                     </a>
                 </li>
 
 
-                <!-- Menu Lokasi -->
+                <!-- Menu menuju halaman Galeri -->
+                <li>
+                    <a href="galeri.html">
+                        Galeri
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju bagian Lokasi di halaman Beranda -->
                 <li>
                     <a href="#lokasi">
                         Lokasi
@@ -76,7 +87,7 @@
                 </li>
 
 
-                <!-- Menu Kontak -->
+                <!-- Menu menuju halaman Kontak -->
                 <li>
                     <a href="kontak.html">
                         Kontak
@@ -90,17 +101,11 @@
     </header>
 
 
-    <!-- =========================================
-         ISI UTAMA HALAMAN
-         ========================================= -->
-
+    <!-- Isi utama halaman Beranda -->
     <main id="konten-utama" class="page">
 
 
-        <!-- =========================================
-             PEMBUKA WEBSITE / PROFIL
-             ========================================= -->
-
+        <!-- Bagian Profil singkat Kopi Nusa -->
         <section
             class="hero"
             id="profil"
@@ -108,17 +113,19 @@
 
             <div class="hero-content">
 
+                <!-- Judul utama halaman -->
                 <h1 id="hero-title">
                     Kopi Nusa
                 </h1>
 
+                <!-- Deskripsi singkat Kopi Nusa -->
                 <p>
                     Kopi lokal pilihan untuk teman belajar,
                     bekerja, dan berdiskusi.
                 </p>
 
 
-                <!-- Tombol yang menjalankan JavaScript -->
+                <!-- Tombol untuk menjalankan JavaScript -->
                 <button
                     id="promoButton"
                     type="button">
@@ -132,67 +139,7 @@
         </section>
 
 
-        <!-- =========================================
-             PRODUK UNGGULAN
-             ========================================= -->
-
-        <section
-            id="produk"
-            class="section"
-            aria-labelledby="produk-title">
-
-            <h2 id="produk-title">
-                Produk Unggulan
-            </h2>
-
-
-            <div class="products">
-
-
-                <!-- Produk 1 -->
-                <article class="product-card">
-
-                    <img
-                        src="IMG/kopi-garwo.jpg"
-                        alt="Kopi Garwo Signature">
-
-                    <h3>
-                        Kopi Garwo Signature
-                    </h3>
-
-                    <p>
-                        Rp20.000
-                    </p>
-
-                </article>
-
-
-                <!-- Produk 2 -->
-                <article class="product-card">
-
-                    <img
-                        src="IMG/americano-peach.jpg"
-                        alt="Americano Peach">
-
-                    <h3>
-                        Americano Peach
-                    </h3>
-
-                    <p>
-                        Rp22.000
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             INFORMASI LOKASI DAN JAM BUKA
-             ========================================= -->
-
+        <!-- Bagian Lokasi dan Jam Buka -->
         <section
             id="lokasi"
             class="section"
@@ -206,6 +153,7 @@
                 Alamat: Jl. Jendral Sudirman, Batang
             </p>
 
+            <!-- Daftar jam buka -->
             <ul>
 
                 <li>
@@ -223,10 +171,7 @@
     </main>
 
 
-    <!-- =========================================
-         FOOTER
-         ========================================= -->
-
+    <!-- Footer website -->
     <footer class="site-footer">
 
         <p>
@@ -237,7 +182,7 @@
     </footer>
 
 
-    <!-- Menghubungkan HTML dengan JavaScript -->
+    <!-- Menghubungkan halaman dengan JavaScript -->
     <script src="JS/script.js"></script>
 
 </body>

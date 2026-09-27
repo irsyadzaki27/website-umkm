@@ -7,8 +7,8 @@
     <!-- Supaya tampilan menyesuaikan ukuran layar -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Judul yang muncul di tab browser -->
-    <title>Tentang Kami — Kopi Nusa</title>
+    <!-- Judul yang muncul pada tab browser -->
+    <title>Tentang Kami - Kopi Nusa</title>
 
     <!-- Menghubungkan halaman dengan file CSS -->
     <link rel="stylesheet" href="CSS/style.css">
@@ -16,27 +16,38 @@
 
 <body>
 
-    <!-- Skip link -->
+    <!--
+        Skip link membantu pengguna keyboard
+        langsung menuju isi utama halaman.
+    -->
     <a class="skip-link" href="#konten-utama">
         Lewati ke konten utama
     </a>
 
-    <!-- Bagian kepala halaman dan navigasi -->
+
+    <!-- Header dan navigasi website -->
     <header class="site-header">
 
-        <!-- Nama/logo UMKM -->
+        <!-- Nama brand yang mengarah ke halaman utama -->
         <div class="brand">
-            <a href="index.html">Kopi Nusa</a>
+            <a href="index.html">
+                Kopi Nusa
+            </a>
         </div>
 
-        <!-- Menu navigasi utama -->
+
+        <!-- Navigasi utama website -->
         <nav aria-label="Navigasi utama">
+
             <ul class="nav-list">
 
-                <!-- Kembali ke halaman utama -->
+                <!-- Menu menuju halaman Beranda -->
                 <li>
-                    <a href="index.html">Beranda</a>
+                    <a href="index.html">
+                        Beranda
+                    </a>
                 </li>
+
 
                 <!-- Halaman yang sedang dibuka -->
                 <li>
@@ -45,37 +56,53 @@
                     </a>
                 </li>
 
-                <!-- Menu menuju bagian produk di halaman utama -->
+
+                <!-- Menu menuju halaman katalog produk -->
                 <li>
-                    <a href="index.html#produk">
+                    <a href="produk.html">
                         Produk
                     </a>
                 </li>
 
-                <!-- Menu menuju bagian lokasi di halaman utama -->
+
+                <!-- Menu menuju halaman Galeri -->
+                <li>
+                    <a href="galeri.html">
+                        Galeri
+                    </a>
+                </li>
+
+
+                <!-- Menu menuju bagian Lokasi di halaman Beranda -->
                 <li>
                     <a href="index.html#lokasi">
                         Lokasi
                     </a>
                 </li>
 
-                <!-- Menu menuju bagian kontak di halaman utama -->
+
+                <!-- Menu menuju halaman Kontak -->
                 <li>
-                    <a href="index.html#kontak">
+                    <a href="kontak.html">
                         Kontak
                     </a>
                 </li>
 
             </ul>
+
         </nav>
 
     </header>
 
+
     <!-- Isi utama halaman Tentang Kami -->
     <main id="konten-utama" class="page">
 
+
         <!-- Penjelasan singkat tentang Kopi Nusa -->
-        <section class="section" aria-labelledby="tentang-title">
+        <section
+            class="section"
+            aria-labelledby="tentang-title">
 
             <h1 id="tentang-title">
                 Tentang Kopi Nusa
@@ -89,8 +116,11 @@
 
         </section>
 
+
         <!-- Cerita atau latar belakang Kopi Nusa -->
-        <section class="section" aria-labelledby="cerita-title">
+        <section
+            class="section"
+            aria-labelledby="cerita-title">
 
             <h2 id="cerita-title">
                 Cerita Kopi Nusa
@@ -104,8 +134,11 @@
 
         </section>
 
-        <!-- Menjelaskan nilai atau komitmen Kopi Nusa -->
-        <section class="section" aria-labelledby="nilai-title">
+
+        <!-- Nilai dan komitmen Kopi Nusa -->
+        <section
+            class="section"
+            aria-labelledby="nilai-title">
 
             <h2 id="nilai-title">
                 Nilai dan Produk
@@ -113,7 +146,9 @@
 
             <article>
 
-                <h3>Komitmen pada Kopi Lokal</h3>
+                <h3>
+                    Komitmen pada Kopi Lokal
+                </h3>
 
                 <p>
                     Kopi Nusa berusaha menghadirkan produk kopi
@@ -127,11 +162,13 @@
 
     </main>
 
-    <!-- Footer -->
+
+    <!-- Footer website -->
     <footer class="site-footer">
 
         <p>
-            &copy; 2026 Kopi Nusa. Semua hak dilindungi.
+            &copy; 2026 Kopi Nusa.
+            Semua hak dilindungi.
         </p>
 
     </footer>
