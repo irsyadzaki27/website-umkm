@@ -13,17 +13,23 @@
 
 <body>
 
-    <!-- Link untuk langsung menuju isi utama halaman -->
+    <!-- Link untuk langsung menuju konten utama -->
     <a class="skip-link" href="#konten-utama">
         Lewati ke konten utama
     </a>
 
-    <!-- Bagian header dan navigasi -->
+
+    <!-- ================================ -->
+    <!-- HEADER DAN NAVIGASI -->
+    <!-- ================================ -->
+
     <header class="site-header">
 
-        <!-- Nama website -->
+        <!-- Nama brand -->
         <div class="brand">
-            <a href="index.html">Kopi Nusa</a>
+            <a href="index.html">
+                Kopi Nusa
+            </a>
         </div>
 
         <!-- Navigasi utama -->
@@ -31,27 +37,39 @@
             <ul class="nav-list">
 
                 <li>
-                    <a href="index.html">Beranda</a>
+                    <a href="index.html">
+                        Beranda
+                    </a>
                 </li>
 
                 <li>
-                    <a href="tentang.html">Tentang Kami</a>
+                    <a href="tentang.html">
+                        Tentang Kami
+                    </a>
                 </li>
 
                 <li>
-                    <a href="index.html#profil">Profil</a>
+                    <a href="index.html#profil">
+                        Profil
+                    </a>
                 </li>
 
                 <li>
-                    <a href="produk.html">Produk</a>
+                    <a href="produk.html">
+                        Produk
+                    </a>
                 </li>
 
                 <li>
-                    <a href="galeri.html">Galeri</a>
+                    <a href="galeri.html">
+                        Galeri
+                    </a>
                 </li>
 
                 <li>
-                    <a href="index.html#lokasi">Lokasi</a>
+                    <a href="index.html#lokasi">
+                        Lokasi
+                    </a>
                 </li>
 
                 <li>
@@ -66,10 +84,12 @@
     </header>
 
 
-    <!-- Isi utama halaman -->
+    <!-- ================================ -->
+    <!-- KONTEN UTAMA -->
+    <!-- ================================ -->
+
     <main id="konten-utama" class="page">
 
-        <!-- Bagian kontak -->
         <section class="section" aria-labelledby="kontak-title">
 
             <h1 id="kontak-title">
@@ -100,15 +120,21 @@
             </p>
 
 
-            <!-- ================================
-                 FORM KONTAK
-                 ================================ -->
+            <!-- ================================ -->
+            <!-- FORM KONTAK -->
+            <!-- ================================ -->
 
-            <h2>Form Kontak</h2>
+            <h2>
+                Form Kontak
+            </h2>
 
-            <form>
+            <form id="form-kontak">
 
-                <!-- Input nama -->
+
+                <!-- ================================ -->
+                <!-- NAMA LENGKAP -->
+                <!-- ================================ -->
+
                 <p>
                     <label for="nama">
                         Nama Lengkap
@@ -118,11 +144,16 @@
                         type="text"
                         id="nama"
                         name="nama"
-                        required>
+                        autocomplete="name"
+                        required
+                        minlength="3">
                 </p>
 
 
-                <!-- Input email -->
+                <!-- ================================ -->
+                <!-- EMAIL -->
+                <!-- ================================ -->
+
                 <p>
                     <label for="email">
                         Alamat Email
@@ -132,11 +163,15 @@
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                         required>
                 </p>
 
 
-                <!-- Input nomor WhatsApp -->
+                <!-- ================================ -->
+                <!-- NOMOR WHATSAPP -->
+                <!-- ================================ -->
+
                 <p>
                     <label for="whatsapp">
                         Nomor WhatsApp
@@ -151,15 +186,116 @@
                 </p>
 
 
-                <!-- Pilihan waktu untuk dihubungi -->
+                <!-- ================================ -->
+                <!-- PILIHAN PAKET -->
+                <!-- ================================ -->
+
+                <p>
+                    <label for="paket">
+                        Paket yang Diminati
+                    </label>
+
+                    <select
+                        id="paket"
+                        name="paket"
+                        required>
+
+                        <option value="">
+                            Pilih paket
+                        </option>
+
+                        <option value="rumahan">
+                            Paket Rumahan
+                        </option>
+
+                        <option value="kantor">
+                            Paket Kantor
+                        </option>
+
+                        <option value="reseller">
+                            Paket Reseller
+                        </option>
+
+                    </select>
+                </p>
+
+
+                <!-- ================================ -->
+                <!-- TOPIK PERTANYAAN -->
+                <!-- ================================ -->
+
+                <fieldset>
+
+                    <legend>
+                        Topik Pertanyaan
+                    </legend>
+
+
+                    <!-- Informasi Produk -->
+                    <p>
+
+                        <input
+                            type="radio"
+                            id="topik-produk"
+                            name="topik"
+                            value="produk"
+                            required>
+
+                        <label for="topik-produk">
+                            Informasi Produk
+                        </label>
+
+                    </p>
+
+
+                    <!-- Status Pesanan -->
+                    <p>
+
+                        <input
+                            type="radio"
+                            id="topik-pesanan"
+                            name="topik"
+                            value="pesanan">
+
+                        <label for="topik-pesanan">
+                            Status Pesanan
+                        </label>
+
+                    </p>
+
+
+                    <!-- Kerja Sama -->
+                    <p>
+
+                        <input
+                            type="radio"
+                            id="topik-kerja-sama"
+                            name="topik"
+                            value="kerja-sama">
+
+                        <label for="topik-kerja-sama">
+                            Kerja Sama
+                        </label>
+
+                    </p>
+
+                </fieldset>
+
+
+                <!-- ================================ -->
+                <!-- WAKTU KONTAK -->
+                <!-- ================================ -->
+
                 <fieldset>
 
                     <legend>
                         Waktu yang Nyaman untuk Dihubungi
                     </legend>
 
-                    <!-- Pilihan pagi -->
+
+                    <!-- Pagi -->
                     <p>
+
                         <input
                             type="radio"
                             id="pagi"
@@ -170,10 +306,13 @@
                         <label for="pagi">
                             Pagi (08.00-12.00)
                         </label>
+
                     </p>
 
-                    <!-- Pilihan siang -->
+
+                    <!-- Siang -->
                     <p>
+
                         <input
                             type="radio"
                             id="siang"
@@ -183,10 +322,13 @@
                         <label for="siang">
                             Siang (12.00-17.00)
                         </label>
+
                     </p>
 
-                    <!-- Pilihan malam -->
+
+                    <!-- Malam -->
                     <p>
+
                         <input
                             type="radio"
                             id="malam"
@@ -196,13 +338,18 @@
                         <label for="malam">
                             Malam (17.00-22.00)
                         </label>
+
                     </p>
 
                 </fieldset>
 
 
-                <!-- Input pesan -->
+                <!-- ================================ -->
+                <!-- PESAN -->
+                <!-- ================================ -->
+
                 <p>
+
                     <label for="pesan">
                         Pesan
                     </label>
@@ -211,27 +358,27 @@
                         id="pesan"
                         name="pesan"
                         rows="5"
-                        required></textarea>
+                        required
+                        minlength="10"></textarea>
+
                 </p>
 
 
-                <!-- Tombol submit -->
+                <!-- ================================ -->
+                <!-- TOMBOL -->
+                <!-- ================================ -->
+
                 <button type="submit">
-                    Kirim Pesan
+                    Tampilkan Preview
                 </button>
 
             </form>
 
 
-            <!-- ================================
-                 PREVIEW FORM
-                 ================================ -->
+            <!-- ================================ -->
+            <!-- HASIL PREVIEW -->
+            <!-- ================================ -->
 
-            <!--
-                Bagian ini awalnya kosong.
-                JavaScript akan menampilkan
-                data form di sini.
-            -->
             <div
                 id="previewForm"
                 aria-live="polite">
@@ -242,7 +389,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ================================ -->
+    <!-- FOOTER -->
+    <!-- ================================ -->
+
     <footer class="site-footer">
 
         <p>
