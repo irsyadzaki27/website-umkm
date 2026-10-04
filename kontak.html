@@ -5,86 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Judul halaman -->
     <title>Kontak - Kopi Nusa</title>
 
-    <!-- Menghubungkan halaman dengan CSS -->
+    <!-- Menghubungkan HTML dengan CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-    <!-- Skip link untuk pengguna keyboard -->
+    <!-- Link untuk langsung menuju isi utama halaman -->
     <a class="skip-link" href="#konten-utama">
         Lewati ke konten utama
     </a>
 
-
-    <!-- Header dan navigasi -->
+    <!-- Bagian header dan navigasi -->
     <header class="site-header">
 
-        <!-- Nama brand -->
+        <!-- Nama website -->
         <div class="brand">
-            <a href="index.html">
-                Kopi Nusa
-            </a>
+            <a href="index.html">Kopi Nusa</a>
         </div>
 
-
-        <!-- Navigasi utama website -->
+        <!-- Navigasi utama -->
         <nav aria-label="Navigasi utama">
-
             <ul class="nav-list">
 
-                <!-- Menu Beranda -->
                 <li>
-                    <a href="index.html">
-                        Beranda
-                    </a>
+                    <a href="index.html">Beranda</a>
                 </li>
 
-
-                <!-- Menu Tentang Kami -->
                 <li>
-                    <a href="tentang.html">
-                        Tentang Kami
-                    </a>
+                    <a href="tentang.html">Tentang Kami</a>
                 </li>
 
-
-                <!-- Menu Profil -->
                 <li>
-                    <a href="index.html#profil">
-                        Profil
-                    </a>
+                    <a href="index.html#profil">Profil</a>
                 </li>
 
-
-                <!-- Menu Produk -->
                 <li>
-                    <a href="produk.html">
-                        Produk
-                    </a>
+                    <a href="produk.html">Produk</a>
                 </li>
 
-
-                <!-- Menu Galeri -->
                 <li>
-                    <a href="galeri.html">
-                        Galeri
-                    </a>
+                    <a href="galeri.html">Galeri</a>
                 </li>
 
-
-                <!-- Menu Lokasi -->
                 <li>
-                    <a href="index.html#lokasi">
-                        Lokasi
-                    </a>
+                    <a href="index.html#lokasi">Lokasi</a>
                 </li>
 
-
-                <!-- Halaman yang sedang dibuka -->
                 <li>
                     <a href="kontak.html" aria-current="page">
                         Kontak
@@ -92,46 +61,36 @@
                 </li>
 
             </ul>
-
         </nav>
 
     </header>
 
 
-    <!-- Isi utama halaman Kontak -->
+    <!-- Isi utama halaman -->
     <main id="konten-utama" class="page">
 
-        <section
-            class="section"
-            aria-labelledby="kontak-title">
+        <!-- Bagian kontak -->
+        <section class="section" aria-labelledby="kontak-title">
 
-            <!-- Judul halaman -->
             <h1 id="kontak-title">
                 Kontak Singkat
             </h1>
-
 
             <p>
                 Jika ingin bertanya atau melakukan pemesanan,
                 silakan hubungi Kopi Nusa melalui kontak berikut.
             </p>
 
-
-            <!-- Informasi kota -->
             <p>
                 <strong>Kota:</strong>
                 Batang, Jawa Tengah
             </p>
 
-
-            <!-- Informasi jam layanan -->
             <p>
                 <strong>Jam layanan:</strong>
                 Senin-Sabtu, 08.00-22.00 WIB
             </p>
 
-
-            <!-- Link menuju WhatsApp -->
             <p>
                 <strong>Hubungi kontak:</strong>
 
@@ -140,12 +99,150 @@
                 </a>
             </p>
 
+
+            <!-- ================================
+                 FORM KONTAK
+                 ================================ -->
+
+            <h2>Form Kontak</h2>
+
+            <form>
+
+                <!-- Input nama -->
+                <p>
+                    <label for="nama">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        required>
+                </p>
+
+
+                <!-- Input email -->
+                <p>
+                    <label for="email">
+                        Alamat Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
+                </p>
+
+
+                <!-- Input nomor WhatsApp -->
+                <p>
+                    <label for="whatsapp">
+                        Nomor WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        name="whatsapp"
+                        placeholder="08xxxxxxxxxx"
+                        required>
+                </p>
+
+
+                <!-- Pilihan waktu untuk dihubungi -->
+                <fieldset>
+
+                    <legend>
+                        Waktu yang Nyaman untuk Dihubungi
+                    </legend>
+
+                    <!-- Pilihan pagi -->
+                    <p>
+                        <input
+                            type="radio"
+                            id="pagi"
+                            name="waktu"
+                            value="Pagi"
+                            required>
+
+                        <label for="pagi">
+                            Pagi (08.00-12.00)
+                        </label>
+                    </p>
+
+                    <!-- Pilihan siang -->
+                    <p>
+                        <input
+                            type="radio"
+                            id="siang"
+                            name="waktu"
+                            value="Siang">
+
+                        <label for="siang">
+                            Siang (12.00-17.00)
+                        </label>
+                    </p>
+
+                    <!-- Pilihan malam -->
+                    <p>
+                        <input
+                            type="radio"
+                            id="malam"
+                            name="waktu"
+                            value="Malam">
+
+                        <label for="malam">
+                            Malam (17.00-22.00)
+                        </label>
+                    </p>
+
+                </fieldset>
+
+
+                <!-- Input pesan -->
+                <p>
+                    <label for="pesan">
+                        Pesan
+                    </label>
+
+                    <textarea
+                        id="pesan"
+                        name="pesan"
+                        rows="5"
+                        required></textarea>
+                </p>
+
+
+                <!-- Tombol submit -->
+                <button type="submit">
+                    Kirim Pesan
+                </button>
+
+            </form>
+
+
+            <!-- ================================
+                 PREVIEW FORM
+                 ================================ -->
+
+            <!--
+                Bagian ini awalnya kosong.
+                JavaScript akan menampilkan
+                data form di sini.
+            -->
+            <div
+                id="previewForm"
+                aria-live="polite">
+            </div>
+
         </section>
 
     </main>
 
 
-    <!-- Footer website -->
+    <!-- Footer -->
     <footer class="site-footer">
 
         <p>
@@ -156,7 +253,7 @@
     </footer>
 
 
-    <!-- Menghubungkan halaman dengan JavaScript -->
+    <!-- Menghubungkan HTML dengan JavaScript -->
     <script src="JS/script.js"></script>
 
 </body>

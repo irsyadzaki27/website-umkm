@@ -1,237 +1,476 @@
+/* ================================
+   STYLE DASAR
+   ================================ */
+
+/* Membuat ukuran elemen lebih mudah diatur */
+* {
+    box-sizing: border-box;
+}
+
+/* Membuat perpindahan antar bagian halaman menjadi lebih halus */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Mengatur tampilan dasar seluruh halaman */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f6f0e8;
-    color: #2f2118;
     line-height: 1.6;
+    color: #2f2118;
+    background-color: #f6f0e8;
 }
 
-/* Mengatur lebar dan jarak isi utama halaman */
-.page {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 24px;
+/* Mengatur tampilan link */
+a {
+    color: #6f3b1f;
 }
 
-/* Mengatur tampilan bagian header */
-.site-header {
-    background-color: #2f2118;
-    padding: 16px 24px;
+/* Mengubah warna link ketika mouse diarahkan ke link */
+a:hover {
+    color: #4a2513;
 }
 
-/* Mengatur susunan menu navigasi */
-.nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-/* Mengatur tampilan tulisan pada menu */
-.nav-list a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* ================================
+   SKIP LINK
+   ================================ */
 
-/* Memberikan garis bawah ketika menu disentuh mouse */
-.nav-list a:hover {
-    text-decoration: underline;
-}
-
-/* Memberikan tanda ketika menu dipilih menggunakan keyboard */
-.nav-list a:focus-visible,
-button:focus-visible {
-    outline: 3px solid #d9a441;
-    outline-offset: 3px;
-}
-
-/* Menyembunyikan skip link sampai digunakan */
+/* Link ini digunakan untuk langsung menuju isi utama halaman */
 .skip-link {
     position: absolute;
     left: -9999px;
     top: 10px;
-    background-color: #ffffff;
-    color: #2f2118;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    background-color: #4a3319;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
     z-index: 1000;
 }
 
-/* Menampilkan skip link ketika dipilih */
+/* Menampilkan skip link ketika dipilih menggunakan keyboard */
 .skip-link:focus {
     left: 10px;
 }
 
-/* Mengatur tampilan bagian hero */
-.hero {
+
+/* ================================
+   HEADER
+   ================================ */
+
+/* Mengatur bagian atas halaman yang berisi nama Kopi Nusa dan navigasi */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 20px;
     background-color: #4a3319;
-    color: #ffffff;
-    border-radius: 24px;
-    padding: 40px 24px;
+    color: white;
+}
+
+/* Mengatur tampilan tulisan Kopi Nusa */
+.brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* ================================
+   NAVIGASI
+   ================================ */
+
+/* Membuat menu navigasi tersusun secara mendatar */
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Mengatur tampilan tulisan pada menu navigasi */
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Memberi tanda pada menu ketika mouse diarahkan atau dipilih */
+.nav-list a:hover,
+.nav-list a:focus {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   KONTEN UTAMA
+   ================================ */
+
+/* Mengatur lebar dan jarak bagian utama halaman */
+.page {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* Memberi jarak antara satu bagian dengan bagian lainnya */
+.section {
     margin-bottom: 32px;
 }
 
-/* Menghilangkan jarak atas pada judul hero */
-.hero h1 {
-    margin-top: 0;
+/* Mengatur warna judul pada bagian utama */
+.section h1,
+.section h2 {
+    color: #4a3319;
 }
 
-/* Mengatur tampilan tombol */
+
+/* ================================
+   HERO
+   ================================ */
+
+/* Mengatur bagian utama atau pembuka pada halaman */
+.hero {
+    padding: 40px 36px;
+    color: #fffdf9;
+    background-color: #4a3319;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mengatur ukuran judul pada bagian hero */
+.hero h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+/* Mengatur jarak paragraf di dalam hero */
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* Mengatur tulisan kecil di atas judul hero */
+.eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   TOMBOL
+   ================================ */
+
+/* Mengatur bentuk dan tampilan tombol */
 button {
-    background-color: #d9a441;
-    color: #2f2118;
+    padding: 10px 18px;
     border: none;
     border-radius: 8px;
-    padding: 10px 16px;
-    font-weight: bold;
+    background-color: #8b4a2f;
+    color: white;
+    font-size: 1rem;
     cursor: pointer;
 }
 
-/* Memberikan sedikit perubahan saat tombol disentuh */
+/* Mengubah warna tombol ketika mouse diarahkan ke tombol */
 button:hover {
-    opacity: 0.9;
+    background-color: #6f3b1f;
 }
 
-/* Menyusun kartu produk dalam bentuk grid */
+
+/* ================================
+   PRODUK
+   ================================ */
+
+/* Membuat daftar produk tersusun dalam beberapa kolom */
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 24px;
 }
 
-/* Mengatur tampilan kartu produk */
+/* Mengatur tampilan kotak setiap produk */
 .product-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 16px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Mengatur ukuran dan bentuk gambar produk */
+/* Mengatur ukuran gambar produk */
 .product-card img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Menghilangkan jarak bawaan pada elemen figure */
-figure {
-    margin: 0;
-}
-
-/* Mengatur tampilan keterangan gambar */
-figcaption {
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Mengatur jarak judul pada kartu produk */
-.product-card h2,
+/* Mengatur tampilan nama produk */
 .product-card h3 {
     margin-bottom: 8px;
+    color: #4a3319;
 }
 
-/* Mengatur tampilan bagian lokasi */
-.location {
-    background-color: #ffffff;
-    border-radius: 16px;
+/* Mengatur tampilan harga produk */
+.product-price {
+    font-weight: bold;
+    color: #8b4a2f;
+}
+
+
+/* ================================
+   LOKASI
+   ================================ */
+
+/* Membuat informasi lokasi terlihat seperti sebuah kotak */
+.lokasi-info {
     padding: 20px;
-    margin-top: 32px;
+    background-color: white;
+    border-radius: 12px;
 }
 
-/* Memberikan jarak pada bagian katalog */
-.catalog {
-    margin-top: 32px;
-    overflow-x: auto;
-}
 
-/* Mengatur ukuran dan tampilan tabel */
+/* ================================
+   TABEL / KATALOG
+   ================================ */
+
+/* Mengatur tabel katalog agar memenuhi lebar halaman */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: white;
 }
 
-/* Mengatur tampilan judul tabel */
-caption {
-    caption-side: top;
-    text-align: left;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-/* Memberikan garis, jarak, dan posisi teks pada tabel */
+/* Mengatur jarak dan garis pada setiap sel tabel */
 th,
 td {
+    padding: 12px;
     border: 1px solid #d8c9b8;
-    padding: 12px 16px;
     text-align: left;
-    vertical-align: top;
 }
 
-/* Memberikan tampilan khusus pada kepala tabel */
+/* Membuat bagian judul tabel lebih mudah dibedakan */
 th {
     background-color: #4a3319;
-    color: #ffffff;
+    color: white;
 }
 
-/* Memberikan warna berbeda pada baris tabel secara bergantian */
-tbody tr:nth-child(even) {
-    background-color: #f8f3ed;
+
+/* ================================
+   GALERI
+   ================================ */
+
+/* Membuat gambar galeri tersusun dalam beberapa kolom */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-/* Mengatur tampilan bagian footer */
+/* Mengatur ukuran gambar agar mengikuti lebar kotaknya */
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* ================================
+   FORM KONTAK
+   ================================ */
+
+/* Memberi jarak antara judul form dengan bagian sebelumnya */
+form {
+    margin-top: 24px;
+}
+
+/* Memberi jarak antara satu bagian form dengan bagian berikutnya */
+form p {
+    margin-bottom: 16px;
+}
+
+/* Membuat tulisan label berada di atas kotak input */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Mengatur tampilan kotak input dan pesan */
+form input,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #d8c9b8;
+    border-radius: 8px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* Memberikan tanda pada kotak yang sedang dipilih */
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #8b4a2f;
+    border-color: #8b4a2f;
+}
+
+/* Membuat tinggi textarea bisa diubah secara vertikal */
+form textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   FIELDSET
+   ================================ */
+
+/* Membuat pilihan waktu terlihat seperti satu kelompok */
+fieldset {
+    margin: 20px 0;
+    padding: 16px;
+    border: 1px solid #d8c9b8;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Mengatur tampilan judul pada kelompok pilihan waktu */
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #4a3319;
+}
+
+/* Mengatur jarak antara pilihan Pagi, Siang, dan Malam */
+fieldset p {
+    margin: 8px 0;
+}
+
+/* Radio button tidak perlu memenuhi seluruh lebar seperti input biasa */
+fieldset input {
+    width: auto;
+}
+
+/* Membuat tulisan pilihan waktu tetap berada di samping radio button */
+fieldset label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+
+/* ================================
+   TOMBOL FORM
+   ================================ */
+
+/* Memberi sedikit jarak antara pesan dan tombol kirim */
+form button[type="submit"] {
+    margin-top: 8px;
+}
+
+
+/* ================================
+   PREVIEW FORM
+   ================================ */
+
+/* Mengatur tampilan kotak preview */
+#previewForm {
+    margin-top: 24px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d8c9b8;
+    border-radius: 12px;
+}
+
+/* Mengatur judul preview */
+#previewForm h2 {
+    margin-top: 0;
+    color: #4a3319;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+/* Mengatur bagian paling bawah halaman */
 .site-footer {
     margin-top: 40px;
     padding: 20px;
-    background-color: #2f2118;
-    color: #ffffff;
+    background-color: #4a3319;
+    color: white;
     text-align: center;
 }
 
-/* Menyesuaikan tampilan website pada layar kecil */
-@media (max-width: 600px) {
-    /* Mengurangi jarak bagian utama pada layar kecil */
-    .page {
-        padding: 16px;
+/* Menghilangkan jarak bawaan pada paragraf footer */
+.site-footer p {
+    margin: 0;
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+/* Mengatur tampilan halaman ketika dibuka di layar yang lebih kecil */
+@media (max-width: 768px) {
+
+    /* Header dibuat bertumpuk agar lebih nyaman di layar kecil */
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    /* Mengurangi jarak header pada layar kecil */
-    .site-header {
-        padding: 16px;
+    /* Memberi jarak menu navigasi agar tidak terlalu rapat */
+    .nav-list {
+        gap: 12px;
+    }
+
+    /* Produk ditampilkan satu kolom pada layar kecil */
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galeri juga dibuat satu kolom pada layar kecil */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mengurangi ukuran jarak dalam hero pada layar kecil */
+    .hero {
+        padding: 30px 24px;
+    }
+}
+
+
+/* ================================
+   TAMPILAN HP
+   ================================ */
+
+/* Mengatur tampilan yang lebih kecil lagi seperti HP */
+@media (max-width: 480px) {
+
+    /* Mengurangi jarak bagian utama pada layar HP */
+    .page {
+        padding: 24px 16px;
+    }
+
+    /* Mengecilkan ukuran judul hero agar tidak terlalu besar */
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
     /* Membuat menu navigasi tersusun ke bawah */
     .nav-list {
         flex-direction: column;
         gap: 8px;
-    }
-
-    /* Mengurangi ukuran jarak pada hero */
-    .hero {
-        padding: 28px 20px;
-    }
-
-    /* Menyesuaikan tinggi gambar produk */
-    .product-card img {
-        height: 200px;
-    }
-
-    /* Membuat tabel dapat digeser jika layar terlalu kecil */
-    .catalog {
-        overflow-x: auto;
-    }
-
-    /* Memberikan lebar minimum agar isi tabel tetap terbaca */
-    table {
-        min-width: 600px;
     }
 }
