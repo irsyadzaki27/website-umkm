@@ -1,30 +1,27 @@
-
 /* =========================================
    1. DESIGN TOKEN
-   Token digunakan untuk menyimpan nilai warna,
-   jarak, dan sudut agar mudah digunakan ulang.
    ========================================= */
 
 :root {
-    /* Token warna untuk tampilan website */
+    /* Warna utama dan pendukung */
     --color-primary: #24452F;
     --color-secondary: #8B5E3C;
     --color-background: #F7F4E8;
     --color-surface: #FFFFFF;
     --color-text: #292B25;
-    --color-light-text: #FFFDF5;
+    --color-text-light: #FFFDF5;
     --color-border: #D8D0BE;
     --color-success: #246B45;
     --color-danger: #A52A2A;
     --color-focus: #1D4ED8;
 
-    /* Token jarak antarbagian */
+    /* Jarak antar elemen */
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
 
-    /* Token untuk mengatur sudut elemen */
+    /* Sudut komponen */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 24px;
@@ -32,59 +29,62 @@
 
 
 /* =========================================
-   2. PENGATURAN DASAR
-   Mengatur ukuran elemen, tulisan, dan latar.
+   2. STYLE DASAR
    ========================================= */
 
-/* Padding dan border dihitung dalam ukuran elemen */
 * {
     box-sizing: border-box;
 }
 
-/* Tampilan dasar seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
+    font-size: 16px;
     line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
-/* Mengatur warna tautan */
-a {
-    color: var(--color-primary);
-}
-
-/* Membatasi gambar agar tidak melebihi wadahnya */
 img {
     max-width: 100%;
+}
+
+a {
+    color: var(--color-secondary);
+}
+
+a:hover {
+    color: var(--color-primary);
 }
 
 
 /* =========================================
    3. SKIP LINK
-   Memudahkan pengguna keyboard melewati navigasi.
    ========================================= */
 
 .skip-link {
     position: absolute;
     left: -9999px;
-    top: 0;
-    padding: var(--spacing-sm);
-    background-color: var(--color-surface);
-    color: var(--color-text);
+    top: 10px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: 1000;
 }
 
-/* Menampilkan tautan ketika mendapat fokus */
-.skip-link:focus {
-    left: 0;
-    z-index: 100;
+.skip-link:focus-visible {
+    left: 10px;
 }
 
 
 /* =========================================
    4. HEADER DAN NAVIGASI
-   Header berisi nama brand dan menu website.
    ========================================= */
 
 .site-header {
@@ -94,64 +94,88 @@ img {
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-lg);
     background-color: var(--color-primary);
+    color: var(--color-text-light);
 }
 
-/* Mengatur tulisan nama Kopi Nusa */
+/* Pembungkus header jika digunakan */
+.site-header > .page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Nama website */
+.brand {
+    margin-bottom: 0;
+}
+
 .brand a {
-    color: var(--color-light-text);
-    font-size: 24px;
-    font-weight: bold;
+    color: var(--color-text-light);
     text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Mengatur daftar menu navigasi */
+.brand a:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+
+/* Daftar navigasi */
 .nav-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: var(--spacing-md);
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-/* Warna tulisan menu */
-.nav-list a {
-    color: var(--color-light-text);
-    text-decoration: none;
+.nav-list li {
+    margin: 0;
 }
 
-/* Memberi garis bawah saat menu disorot atau aktif */
+.nav-list a {
+    display: inline-block;
+    padding: var(--spacing-sm);
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--radius-sm);
+}
+
 .nav-list a:hover,
 .nav-list a[aria-current="page"] {
     text-decoration: underline;
 }
 
+.nav-list a:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
 
 /* =========================================
-   5. KONTEN DAN JUDUL
-   Mengatur area isi utama dan judul halaman.
+   5. KONTEN UTAMA
    ========================================= */
 
-/* Membatasi lebar konten agar nyaman dibaca */
 .page {
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: var(--spacing-lg);
 }
 
-/* Memberi jarak antarbagian halaman */
 .section {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Tampilan khusus bagian pembuka */
-.hero {
-    padding: var(--spacing-xl);
-    background-color: var(--color-surface);
-    border-radius: var(--radius-md);
-}
-
-/* Menyamakan warna judul */
 h1,
 h2,
 h3 {
@@ -161,261 +185,540 @@ h3 {
 
 
 /* =========================================
-   6. TOMBOL
-   Mengatur warna, jarak, dan bentuk tombol.
+   6. HERO DAN PROFIL BERANDA
+   ========================================= */
+
+/* Hero standar untuk halaman lain */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    padding: var(--spacing-xl);
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto sebagai background khusus profil beranda */
+.hero#profil {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 350px;
+    padding: var(--spacing-xl);
+    overflow: hidden;
+
+    background-color: var(--color-primary);
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(20, 35, 25, 0.72),
+            rgba(20, 35, 25, 0.15)
+        ),
+        url("../assets/images/etalase-kopi.jpg");
+
+    /* Seluruh foto mengisi kotak profil */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: var(--radius-lg);
+}
+
+/* Area tulisan profil */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+}
+
+/* Judul pada profil beranda */
+.hero#profil h1 {
+    margin-top: 0;
+    color: var(--color-text-light);
+    font-size: 2.2rem;
+}
+
+/* Deskripsi pada profil beranda */
+.hero#profil .hero-content p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Gambar HTML disembunyikan khusus di profil beranda
+   karena foto sudah digunakan sebagai background */
+.hero#profil .hero-image {
+    display: none;
+}
+
+/* Gambar Hero pada halaman lain tetap ditampilkan */
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+/* Tulisan kecil di atas judul jika digunakan */
+.eyebrow {
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Hero khusus galeri */
+.hero-gallery {
+    display: block;
+    text-align: center;
+}
+
+.hero-gallery h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-gallery p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   7. TOMBOL
    ========================================= */
 
 .button,
 button {
     display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 10px 18px;
     border: none;
     border-radius: var(--radius-sm);
     background-color: var(--color-secondary);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
+    font-family: inherit;
+    font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Mengubah warna tombol ketika diarahkan kursor */
 .button:hover,
 button:hover {
     background-color: var(--color-primary);
+    color: var(--color-text-light);
 }
 
-
-/* =========================================
-   7. FOKUS KEYBOARD
-   Membantu pengguna melihat elemen yang sedang dipilih.
-   ========================================= */
-
-:focus-visible {
+/* Fokus keyboard */
+:where(a, button, input, select, textarea):focus-visible {
     outline: 3px solid var(--color-focus);
     outline-offset: 3px;
 }
 
 
 /* =========================================
-   8. KARTU PRODUK
-   Membuat tiga kartu produk berjejer.
-   inline-block digunakan tanpa menambahkan Grid.
+   8. PRODUK
    ========================================= */
 
-/* Menghilangkan spasi antarbaris teks di wadah produk */
+/* Daftar produk */
 .products {
-    font-size: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-lg);
 }
 
-/* Mengatur setiap kartu produk agar bisa berjejer */
+/* Kartu produk */
 .product-card {
-    display: inline-block;
-    vertical-align: top;
-    width: 32%;
-    margin-right: 1%;
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--spacing-lg);
+    background-color: var(--color-surface);
+    color: var(--color-text);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    background-color: var(--color-surface);
-
-    /* Mengembalikan ukuran tulisan di dalam kartu */
-    font-size: 16px;
-    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Menghilangkan jarak bawaan elemen figure */
-.product-card figure {
-    margin: 0;
-}
-
-/* Menyamakan ukuran tampilan gambar produk */
+/* Gambar produk */
 .product-card img {
     display: block;
     width: 100%;
-    height: 200px;
-
-    /* Memenuhi area gambar tanpa mengubah proporsinya */
-    object-fit: cover;
+    height: auto;
     border-radius: var(--radius-sm);
 }
 
-/* Mengatur nama dan harga di bawah gambar */
-.product-card figcaption {
-    margin-top: var(--spacing-md);
-    color: var(--color-text);
+/* Gambar pada kartu galeri */
+.gallery-grid .product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Judul produk */
+.product-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+/* Harga produk */
+.product-price,
+.price {
     font-weight: bold;
+    color: var(--color-secondary);
+}
+
+/* Label produk pilihan */
+.product-badge {
+    align-self: flex-start;
+    margin-bottom: var(--spacing-sm);
+    padding: 4px var(--spacing-sm);
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: bold;
+    background-color: #FEF3C7;
+    border-radius: 999px;
+}
+
+/* Tombol dan tautan pada kartu produk */
+.card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+}
+
+/* Judul halaman produk */
+main.page > h1,
+main.page > h2 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+/* Nama dan harga produk berada di tengah */
+.product-card {
+    text-align: center;
+}
+
+.product-card h3,
+.product-card p,
+.product-card figcaption,
+.product-card .price,
+.product-card .product-price {
+    text-align: center;
+}
+
+/* Label produk berada di tengah */
+.product-card .product-badge {
+    align-self: center;
+}
+
+/* Tombol pilihan produk */
+.product-actions,
+.product-buttons,
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+/* Judul daftar harga produk */
+#daftar-harga-title {
+    text-align: center;
 }
 
 
 /* =========================================
    9. GALERI
-   Membuat gambar galeri berjejer menggunakan inline-block.
    ========================================= */
 
-.gallery img {
-    display: inline-block;
-    vertical-align: top;
-    width: 32%;
-    height: 200px;
-    margin-right: 1%;
-    margin-bottom: var(--spacing-md);
+/* Menyusun tiga foto galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md);
+}
 
-    /* Memotong gambar agar memenuhi area yang ditentukan */
-    object-fit: cover;
-    border-radius: var(--radius-sm);
+/* Kartu galeri */
+.gallery-grid .product-card {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+/* Pembungkus gambar dan keterangan */
+.gallery-grid figure {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+/* Nama produk dan harga di bawah foto */
+.gallery-grid figcaption {
+    margin-top: var(--spacing-md);
+    color: var(--color-text);
+    font-weight: bold;
+    text-align: center;
 }
 
 
 /* =========================================
-   10. INFORMASI LOKASI
-   Memberi latar dan jarak pada informasi lokasi.
+   10. LOKASI
    ========================================= */
 
 .lokasi-info {
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
     background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Judul Lokasi & Jam Buka rata kiri */
+#lokasi-title {
+    text-align: left;
+}
+
+/* Bagian lokasi rata kiri */
+#lokasi {
+    width: 100%;
+    text-align: left;
+}
+
+/* Alamat dan jadwal tetap rata kiri */
+#lokasi p,
+#lokasi ul {
+    text-align: left;
 }
 
 
 /* =========================================
-   11. TABEL
-   Mengatur tabel harga dan informasi lainnya.
+   11. TABEL / KATALOG
    ========================================= */
 
-/* Membuat tabel memenuhi lebar wadah */
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
-/* Mengatur keterangan tabel */
 caption {
     padding: var(--spacing-sm);
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
 
-/* Mengatur sel judul dan isi tabel */
 th,
 td {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
     border: 1px solid var(--color-border);
     text-align: left;
 }
 
-/* Memberi warna berbeda pada judul kolom */
 th {
     background-color: var(--color-primary);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
 }
 
 
 /* =========================================
-   12. FORMULIR
-   Mengatur label, kolom isian, dan pilihan.
+   12. FORM KONTAK
    ========================================= */
 
-/* Memberi jarak antarbaris formulir */
+form {
+    margin-top: var(--spacing-lg);
+}
+
 form p {
     margin-bottom: var(--spacing-md);
 }
 
-/* Menampilkan label di atas kolom isian */
 form label {
     display: block;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-text);
     font-weight: bold;
+    color: var(--color-text);
 }
 
-/* Mengatur ukuran dan tampilan kolom formulir */
-form input:not([type="radio"]),
-form textarea,
-form select {
+form input,
+form select,
+form textarea {
     width: 100%;
-    padding: var(--spacing-sm);
+    padding: 10px;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     background-color: var(--color-surface);
     color: var(--color-text);
+    font-family: inherit;
+    font-size: 1rem;
 }
 
-/* Mengatur kotak pengelompokan pilihan */
-form fieldset {
-    margin-bottom: var(--spacing-md);
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--color-secondary);
 }
 
-/* Mengatur judul kelompok pilihan */
-form legend {
-    padding: 0 var(--spacing-sm);
-    color: var(--color-text);
-    font-weight: bold;
+form textarea {
+    resize: vertical;
 }
 
-/* Membiarkan radio button memiliki ukuran otomatis */
-form input[type="radio"] {
+/* Radio dan checkbox */
+form input[type="radio"],
+form input[type="checkbox"],
+fieldset input {
     width: auto;
 }
 
-/* Menampilkan label radio secara berdampingan */
-form fieldset label {
-    display: inline-block;
-    margin-right: var(--spacing-md);
+
+/* =========================================
+   13. FIELDSET
+   ========================================= */
+
+fieldset {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+}
+
+legend {
+    padding: 0 var(--spacing-sm);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+fieldset p {
+    margin: var(--spacing-sm) 0;
+}
+
+fieldset label {
+    display: inline;
+    margin-bottom: 0;
     font-weight: normal;
 }
 
 
 /* =========================================
-   13. PREVIEW FORMULIR
-   Mengatur kotak untuk melihat ringkasan isian.
+   14. TOMBOL FORM
    ========================================= */
 
-#previewForm {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background-color: var(--color-surface);
-}
-
-/* Menghilangkan jarak atas judul preview */
-#previewForm h2 {
-    margin-top: 0;
+form button[type="submit"] {
+    margin-top: var(--spacing-sm);
 }
 
 
 /* =========================================
-   14. STATUS PESAN
-   Membedakan pesan berhasil dan pesan kesalahan.
+   15. PREVIEW FORM
    ========================================= */
 
+#previewForm {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+#previewForm h2 {
+    margin-top: 0;
+    color: var(--color-secondary);
+}
+
+/* Pesan berhasil */
 .status-success {
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--color-success);
+    background-color: var(--color-surface);
     color: var(--color-success);
 }
 
+/* Pesan kesalahan */
 .status-danger {
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--color-danger);
+    background-color: var(--color-surface);
     color: var(--color-danger);
 }
 
 
 /* =========================================
-   15. FOOTER
-   Mengatur bagian bawah website.
+   16. FOOTER
    ========================================= */
 
-.site-footer {
+.site-footer,
+footer {
+    margin-top: var(--spacing-xl);
     padding: var(--spacing-lg);
     background-color: var(--color-primary);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     text-align: center;
 }
 
-/* Menghilangkan jarak bawaan paragraf footer */
-.site-footer p {
+.site-footer p,
+footer p {
     margin: 0;
+}
+
+
+/* Mengatur judul bagian galeri agar berada di tengah */
+.gallery-title {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+/* Mengatur keterangan foto galeri */
+.gallery-grid figcaption {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Mengatur teks penjelasan di bawah foto */
+.gallery-grid figcaption p {
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Mengatur bagian audio suasana kedai */
+.audio-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Mengatur judul audio */
+.audio-section h2 {
+    color: var(--color-primary);
+}
+
+/* Mengatur teks penjelasan audio */
+.audio-section p {
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Mengatur ukuran pemutar audio */
+.audio-section audio {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: var(--spacing-md) auto 0;
 }

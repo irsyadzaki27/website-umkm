@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -71,57 +72,86 @@
     <main id="konten-utama" class="page">
 
         <!-- Bagian pembuka halaman galeri -->
-        <section class="hero">
+        <section class="hero hero-gallery">
             <h2>Galeri Kopi Nusa</h2>
 
             <p>
-                Berikut beberapa tampilan produk yang tersedia di Kopi Nusa.
+                Lihat proses pembuatan kopi dan suasana
+                yang ada di kedai Kopi Nusa.
             </p>
         </section>
 
-        <!-- Bagian yang menampilkan produk -->
+        <!-- Bagian yang menampilkan aktivitas dan suasana kedai -->
         <section>
-            <h2>Galeri Produk</h2>
+            <h2 class="gallery-title">Aktivitas dan Suasana Kedai</h2>
 
-            <div class="products">
+            <!-- Pembungkus gambar galeri -->
+            <div class="gallery-grid">
 
-                <!-- Produk pertama -->
+                <!-- Foto pertama: proses menyeduh kopi -->
                 <article class="product-card">
                     <figure>
-                        <img src="IMG/kopi-garwo.jpg"
-                             alt="Segelas Kopi Garwo Signature dengan warna kopi susu">
+                        <img src="IMG/barista-kopi.jpg"
+                             alt="Barista Kopi Nusa sedang menyeduh kopi secara manual">
 
                         <figcaption>
-                            Kopi Garwo Signature - Rp20.000
+                            Proses Menyeduh Kopi
+                            <p>
+                                Setiap cangkir kopi disiapkan dengan teliti
+                                untuk menjaga cita rasa terbaik.
+                            </p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Produk kedua -->
+                <!-- Foto kedua: suasana kedai -->
                 <article class="product-card">
                     <figure>
-                        <img src="IMG/americano-peach.jpg"
-                             alt="Minuman Americano Peach dengan warna oranye dan es batu">
+                        <img src="IMG/suasana-kedai.jpg"
+                             alt="Interior kedai Kopi Nusa dengan meja kayu dan pencahayaan hangat">
 
                         <figcaption>
-                            Americano Peach - Rp22.000
+                            Suasana Kedai
+                            <p>
+                                Tempat yang nyaman untuk menikmati kopi
+                                dan bersantai.
+                            </p>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Produk baru yang ditambahkan pada P03 -->
+                <!-- Foto ketiga: biji kopi -->
                 <article class="product-card">
                     <figure>
-                        <img src="IMG/mojito.jpg"
-                             alt="Minuman mojito dengan irisan jeruk nipis, daun mint, dan es batu">
+                        <img src="IMG/biji-kopi.jpg"
+                             alt="Biji kopi pilihan di dalam wadah bersama alat penggiling kopi">
 
                         <figcaption>
-                            Mojito - Rp18.000
+                            Biji Kopi Pilihan
+                            <p>
+                                Bahan baku berkualitas menjadi bagian penting
+                                dalam menghasilkan rasa kopi yang khas.
+                            </p>
                         </figcaption>
                     </figure>
                 </article>
 
             </div>
+        </section>
+
+        <!-- Bagian audio suasana kedai -->
+        <section class="audio-section">
+            <h2>Audio Suasana Kedai</h2>
+
+            <p>
+                Dengarkan suasana santai sambil menikmati
+                cerita kopi dari Kopi Nusa.
+            </p>
+
+            <audio controls preload="metadata">
+                <source src="Audio/suasana-kedai.mp3" type="audio/mpeg">
+                Browser kamu tidak mendukung pemutar audio.
+            </audio>
         </section>
 
     </main>
