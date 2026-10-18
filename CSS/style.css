@@ -129,9 +129,10 @@ a:hover {
 /* Daftar navigasi */
 .nav-list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    gap: var(--spacing-md);
+    align-items: flex-start;
+    gap: var(--spacing-sm);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -191,10 +192,10 @@ h3 {
 /* Hero standar untuk halaman lain */
 .hero {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     align-items: center;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md);
     color: var(--color-text-light);
     background-color: var(--color-primary);
     border-radius: var(--radius-lg);
@@ -325,11 +326,12 @@ button:hover {
    8. PRODUK
    ========================================= */
 
-/* Daftar produk */
+/* Daftar produk: satu kolom pada layar kecil */
 .products {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+    min-width: 0;
 }
 
 /* Kartu produk */
@@ -353,10 +355,12 @@ button:hover {
     border-radius: var(--radius-sm);
 }
 
-/* Gambar pada kartu galeri */
-.gallery-grid .product-card img {
-    height: 200px;
-    object-fit: cover;
+/* Galeri: satu kolom pada layar kecil */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    min-width: 0;
 }
 
 /* Judul produk */
@@ -443,11 +447,23 @@ main.page > h2 {
    9. GALERI
    ========================================= */
 
-/* Menyusun tiga foto galeri */
+/* Menyusun foto galeri: satu kolom pada layar kecil */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-md);
+    min-width: 0;
+}
+
+.gallery-grid > * {
+    min-width: 0;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Kartu galeri */
@@ -721,4 +737,125 @@ footer p {
     width: 100%;
     max-width: 600px;
     margin: var(--spacing-md) auto 0;
+}
+
+/* Banner Tentang Kopi Nusa */
+.about-hero {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #203d2c;
+    display: flex;
+    align-items: center;
+    padding: clamp(20px, 4vw, 48px);
+    box-sizing: border-box;
+}
+
+.about-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 28, 19, 0.96) 0%,
+        rgba(10, 28, 19, 0.85) 55%,
+        rgba(10, 28, 19, 0.35) 100%
+    );
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    color: #fff;
+}
+
+.about-eyebrow {
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #f3d7a0;
+}
+.about-hero-content h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 12px 0 18px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.about-hero-description {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+.about-hero-highlight {
+    color: #f3d7a0;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        min-height: 360px;
+    }
+
+    .about-hero-content h1 {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Responsive untuk tablet */
+@media (min-width: 42rem) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .nav-list {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+}
+/* Responsive untuk tablet besar dan laptop */
+@media (min-width: 48rem) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        padding: var(--spacing-xl);
+    }
+}
+/* Responsive untuk layar lebar */
+@media (min-width: 60rem) {
+    .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+/* Tabel harga responsif */
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.table-scroll table {
+    min-width: 40rem;
 }
