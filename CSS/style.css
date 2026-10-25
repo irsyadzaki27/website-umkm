@@ -109,9 +109,11 @@ a:hover {
     padding: 0;
 }
 
-/* Nama website */
+/* Nama website */  
 .brand {
     margin-bottom: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .brand a {
@@ -858,4 +860,52 @@ footer p {
 
 .table-scroll table {
     min-width: 40rem;
+}
+
+@media (max-width: 41.999rem) {
+    .site-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .brand {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .brand a {
+        display: inline-block;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .site-header nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .nav-list li {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .nav-list a {
+        display: inline-block;
+        padding: 5px 1px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
 }
