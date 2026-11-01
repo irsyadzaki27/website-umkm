@@ -1,151 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <!-- Mengatur karakter yang digunakan pada halaman -->
-    <meta charset="UTF-8">
-
-    <!-- Membuat tampilan halaman menyesuaikan ukuran layar -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Judul yang muncul pada tab browser -->
-    <title>Galeri - Kopi Nusa</title>
-
-    <!-- Menghubungkan halaman dengan file CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galeri Kopi Nusa - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <!-- Link untuk lompat ke konten utama -->
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
 
-    <!-- Link untuk melewati navigasi dan langsung menuju isi halaman -->
-    <a class="skip-link" href="#konten-utama">
-        Lewati ke konten utama
-    </a>
-
-    <!-- Bagian header berisi nama website dan navigasi -->
+    <!-- Header dan navigasi -->
     <header class="site-header">
-
-            <!-- Nama website -->
-            <div class="brand">
-                <a href="index.html">Kopi Nusa</a>
-            </div>
-
-            <!-- Navigasi utama website -->
-            <nav aria-label="Navigasi utama">
-                <ul class="nav-list">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="tentang.html">Tentang Kami</a></li>
-                    <li><a href="produk.html">Produk</a></li>
-                    <li><a href="galeri.html" aria-current="page">Galeri</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">Kopi Nusa</a>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a aria-current="page" href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Isi utama halaman -->
-    <main id="konten-utama" class="page">
+    <main id="konten" class="page">
 
-        <!-- Bagian pembuka halaman galeri -->
-        <section class="hero hero-gallery">
-            <h2>Galeri Kopi Nusa</h2>
-
-            <p>
-                Lihat proses pembuatan kopi dan suasana
-                yang ada di kedai Kopi Nusa.
-            </p>
-        </section>
-
-        <!-- Bagian yang menampilkan aktivitas dan suasana kedai -->
-        <section>
-            <h2 class="gallery-title">Aktivitas dan Suasana Kedai</h2>
-
-            <!-- Pembungkus gambar galeri -->
-            <div class="gallery-grid">
-
-                <!-- Foto pertama: proses menyeduh kopi -->
-                <article class="product-card">
-                    <figure>
-                        <img src="IMG/barista-kopi.jpg"
-                             alt="Barista Kopi Nusa sedang menyeduh kopi secara manual"
-                             width="1536"
-                             height="1024"
-                             loading="lazy">
-
-                        <figcaption>
-                            Proses Menyeduh Kopi
-                            <p>
-                                Setiap cangkir kopi disiapkan dengan teliti
-                                untuk menjaga cita rasa terbaik.
-                            </p>
-                        </figcaption>
-                    </figure>
-                </article>
-
-                <!-- Foto kedua: suasana kedai -->
-                <article class="product-card">
-                    <figure>
-                        <img src="IMG/suasana-kedai.jpg"
-                             alt="Interior kedai Kopi Nusa dengan meja kayu dan pencahayaan hangat"
-                             width="1536"
-                             height="1024"
-                             loading="lazy">
-
-                        <figcaption>
-                            Suasana Kedai
-                            <p>
-                                Tempat yang nyaman untuk menikmati kopi
-                                dan bersantai.
-                            </p>
-                        </figcaption>
-                    </figure>
-                </article>
-
-                <!-- Foto ketiga: biji kopi -->
-                <article class="product-card">
-                    <figure>
-                        <img src="IMG/biji-kopi.jpg"
-                             alt="Biji kopi pilihan di dalam wadah bersama alat penggiling kopi"
-                             width="1536"
-                             height="1024"
-                             loading="lazy">
-
-                        <figcaption>
-                            Biji Kopi Pilihan
-                            <p>
-                                Bahan baku berkualitas menjadi bagian penting
-                                dalam menghasilkan rasa kopi yang khas.
-                            </p>
-                        </figcaption>
-                    </figure>
-                </article>
-
+        <!-- Banner -->
+        <section class="hero hero-banner" aria-labelledby="galeri-title">
+            <img class="banner-image" src="assets/images/header-galeri-kopi-nusa.jpg" width="948" height="1024" alt="Ilustrasi suasana kedai Kopi Nusa: separuh berwarna dan separuh sketsa garis, dengan pengunjung mengobrol di meja kayu">
+            <div class="hero-content">
+                <h1 id="galeri-title">Galeri Kopi Nusa</h1>
+                <p>Lihat proses pembuatan kopi dan suasana yang ada di kedai Kopi Nusa.</p>
             </div>
         </section>
 
-        <!-- Bagian audio suasana kedai -->
-        <section class="audio-section">
-            <h2>Audio Suasana Kedai</h2>
+        <!-- Foto kedai -->
+        <section class="section" aria-labelledby="media-title">
+            <h2 id="media-title">Aktivitas dan Suasana Kedai</h2>
+            <div class="gallery-grid">
+                <figure class="media-card">
+                    <img src="assets/images/barista-kopi.jpg" width="1536" height="1024" loading="lazy" alt="Barista Kopi Nusa sedang menyeduh kopi secara manual">
+                    <figcaption>
+                        <strong>Proses Menyeduh Kopi</strong>
+                        Setiap cangkir kopi disiapkan dengan teliti untuk menjaga cita rasa terbaik.
+                    </figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="assets/images/suasana-kedai.jpg" width="1536" height="1024" loading="lazy" alt="Interior kedai Kopi Nusa dengan meja kayu dan pencahayaan hangat">
+                    <figcaption>
+                        <strong>Suasana Kedai</strong>
+                        Tempat yang nyaman untuk menikmati kopi dan bersantai.
+                    </figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="assets/images/biji-kopi.jpg" width="1448" height="1086" loading="lazy" alt="Biji kopi pilihan di dalam wadah bersama alat penggiling kopi">
+                    <figcaption>
+                        <strong>Biji Kopi Pilihan</strong>
+                        Bahan baku berkualitas menjadi bagian penting dalam menghasilkan rasa kopi yang khas.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
 
-            <p>
-                Dengarkan suasana santai sambil menikmati
-                cerita kopi dari Kopi Nusa.
-            </p>
-
-            <audio controls preload="metadata">
-                <source src="AUDIO/suasana-kedai.mp3" type="audio/mpeg">
-                Browser kamu tidak mendukung pemutar audio.
+        <!-- Audio suasana kedai -->
+        <section class="section" aria-labelledby="audio-title">
+            <h2 id="audio-title">Audio Suasana Kedai</h2>
+            <p id="audio-note">Dengarkan suasana santai sambil menikmati cerita kopi dari Kopi Nusa.</p>
+            <audio controls preload="metadata" aria-describedby="audio-note">
+                <source src="assets/audio/suasana-kedai.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung pemutar audio.
             </audio>
         </section>
 
     </main>
 
-    <!-- Bagian bawah website -->
-    <footer>
-        <div class="page">
-            <p>
-                &copy; 2026 Kopi Nusa. Semua hak dilindungi.
-            </p>
-        </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Kopi Nusa. Semua hak dilindungi.</p>
     </footer>
 
 </body>

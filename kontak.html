@@ -1,372 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kontak - Kopi Nusa</title>
-
-    <!-- Menghubungkan HTML dengan CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontak Kopi Nusa - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/form.js" defer></script>
 </head>
-
 <body>
+    <!-- Link untuk lompat ke konten utama -->
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
 
-    <!-- Link untuk langsung menuju konten utama -->
-    <a class="skip-link" href="#konten-utama">
-        Lewati ke konten utama
-    </a>
-
-
-    <!-- ================================ -->
-    <!-- HEADER DAN NAVIGASI -->
-    <!-- ================================ -->
-
+    <!-- Header dan navigasi -->
     <header class="site-header">
-
-        <!-- Nama brand -->
-        <div class="brand">
-            <a href="index.html">
-                Kopi Nusa
-            </a>
-        </div>
-
-        <!-- Navigasi utama -->
-        <nav aria-label="Navigasi utama">
-            <ul class="nav-list">
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">Kopi Nusa</a>
+            <ul>
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
                 <li><a href="produk.html">Produk</a></li>
                 <li><a href="galeri.html">Galeri</a></li>
-                <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+                <li><a aria-current="page" href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
+    <main id="konten" class="page">
+        <h1>Kontak Kopi Nusa</h1>
+        <p>Silakan kirim pertanyaan tentang produk, pesanan, atau kerja sama.</p>
 
-    <!-- ================================ -->
-    <!-- KONTEN UTAMA -->
-    <!-- ================================ -->
+        <!-- Informasi kontak -->
+        <section class="section" aria-labelledby="info-title">
+            <h2 id="info-title">Informasi Kontak</h2>
+            <ul>
+                <li><strong>Kota:</strong> Batang, Jawa Tengah</li>
+                <li><strong>Jam layanan:</strong> Senin-Sabtu, 08.00-22.00 WIB</li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/6282225126027">Hubungi kami melalui WhatsApp</a></li>
+            </ul>
+        </section>
 
-    <main id="konten-utama" class="page">
-
-        <section class="section" aria-labelledby="kontak-title">
-
-            <h1 id="kontak-title">
-                Kontak Singkat
-            </h1>
-
-            <p>
-                Jika ingin bertanya atau melakukan pemesanan,
-                silakan hubungi Kopi Nusa melalui kontak berikut.
-            </p>
-
-            <p>
-                <strong>Kota:</strong>
-                Batang, Jawa Tengah
-            </p>
-
-            <p>
-                <strong>Jam layanan:</strong>
-                Senin-Sabtu, 08.00-22.00 WIB
-            </p>
-
-            <p>
-                <strong>Hubungi kontak:</strong>
-
-                <a href="https://wa.me/6282225126027">
-                    Hubungi kami melalui WhatsApp
-                </a>
-            </p>
-
-
-            <!-- ================================ -->
-            <!-- FORM KONTAK -->
-            <!-- ================================ -->
-
-            <h2>
-                Form Kontak
-            </h2>
-
-            <form id="form-kontak">
-
-
-                <!-- ================================ -->
-                <!-- NAMA LENGKAP -->
-                <!-- ================================ -->
-
-                <p>
-                    <label for="nama">
-                        Nama Lengkap
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nama"
-                        name="nama"
-                        autocomplete="name"
-                        required
-                        minlength="3">
-                </p>
-
-
-                <!-- ================================ -->
-                <!-- EMAIL -->
-                <!-- ================================ -->
-
-                <p>
-                    <label for="email">
-                        Alamat Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        required>
-                </p>
-
-
-                <!-- ================================ -->
-                <!-- NOMOR WHATSAPP -->
-                <!-- ================================ -->
-
-                <p>
-                    <label for="whatsapp">
-                        Nomor WhatsApp
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="whatsapp"
-                        name="whatsapp"
-                        placeholder="08xxxxxxxxxx"
-                        required>
-                </p>
-
-
-                <!-- ================================ -->
-                <!-- PILIHAN PAKET -->
-                <!-- ================================ -->
-
-                <p>
-                    <label for="paket">
-                        Paket yang Diminati
-                    </label>
-
-                    <select
-                        id="paket"
-                        name="paket"
-                        required>
-
-                        <option value="">
-                            Pilih paket
-                        </option>
-
-                        <option value="rumahan">
-                            Paket Rumahan
-                        </option>
-
-                        <option value="kantor">
-                            Paket Kantor
-                        </option>
-
-                        <option value="reseller">
-                            Paket Reseller
-                        </option>
-
+        <!-- Form kontak -->
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Form Kontak</h2>
+            <form id="form-kontak" action="#" method="post">
+                <div class="field">
+                    <label for="nama">Nama lengkap</label>
+                    <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="whatsapp">Nomor WhatsApp</label>
+                    <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" required>
+                </div>
+                <div class="field">
+                    <label for="paket">Paket yang diminati</label>
+                    <select id="paket" name="paket" required>
+                        <option value="">Pilih paket</option>
+                        <option value="rumahan">Paket rumahan</option>
+                        <option value="kantor">Paket kantor</option>
+                        <option value="reseller">Paket reseller</option>
                     </select>
-                </p>
-
-
-                <!-- ================================ -->
-                <!-- TOPIK PERTANYAAN -->
-                <!-- ================================ -->
-
+                </div>
                 <fieldset>
-
-                    <legend>
-                        Topik Pertanyaan
-                    </legend>
-
-
-                    <!-- Informasi Produk -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="topik-produk"
-                            name="topik"
-                            value="produk"
-                            required>
-
-                        <label for="topik-produk">
-                            Informasi Produk
-                        </label>
-
-                    </p>
-
-
-                    <!-- Status Pesanan -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="topik-pesanan"
-                            name="topik"
-                            value="pesanan">
-
-                        <label for="topik-pesanan">
-                            Status Pesanan
-                        </label>
-
-                    </p>
-
-
-                    <!-- Kerja Sama -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="topik-kerja-sama"
-                            name="topik"
-                            value="kerja-sama">
-
-                        <label for="topik-kerja-sama">
-                            Kerja Sama
-                        </label>
-
-                    </p>
-
+                    <legend>Topik pertanyaan</legend>
+                    <label><input type="radio" name="topik" value="produk" required> Informasi produk</label>
+                    <label><input type="radio" name="topik" value="pesanan"> Status pesanan</label>
+                    <label><input type="radio" name="topik" value="kerja-sama"> Kerja sama</label>
                 </fieldset>
-
-
-                <!-- ================================ -->
-                <!-- WAKTU KONTAK -->
-                <!-- ================================ -->
-
                 <fieldset>
-
-                    <legend>
-                        Waktu yang Nyaman untuk Dihubungi
-                    </legend>
-
-
-                    <!-- Pagi -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="pagi"
-                            name="waktu"
-                            value="Pagi"
-                            required>
-
-                        <label for="pagi">
-                            Pagi (08.00-12.00)
-                        </label>
-
-                    </p>
-
-
-                    <!-- Siang -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="siang"
-                            name="waktu"
-                            value="Siang">
-
-                        <label for="siang">
-                            Siang (12.00-17.00)
-                        </label>
-
-                    </p>
-
-
-                    <!-- Malam -->
-                    <p>
-
-                        <input
-                            type="radio"
-                            id="malam"
-                            name="waktu"
-                            value="Malam">
-
-                        <label for="malam">
-                            Malam (17.00-22.00)
-                        </label>
-
-                    </p>
-
+                    <legend>Waktu yang nyaman untuk dihubungi</legend>
+                    <label><input type="radio" name="waktu" value="Pagi (08.00-12.00)" required> Pagi (08.00-12.00)</label>
+                    <label><input type="radio" name="waktu" value="Siang (12.00-17.00)"> Siang (12.00-17.00)</label>
+                    <label><input type="radio" name="waktu" value="Malam (17.00-22.00)"> Malam (17.00-22.00)</label>
                 </fieldset>
-
-
-                <!-- ================================ -->
-                <!-- PESAN -->
-                <!-- ================================ -->
-
-                <p>
-
-                    <label for="pesan">
-                        Pesan
-                    </label>
-
-                    <textarea
-                        id="pesan"
-                        name="pesan"
-                        rows="5"
-                        required
-                        minlength="10"></textarea>
-
-                </p>
-
-
-                <!-- ================================ -->
-                <!-- TOMBOL -->
-                <!-- ================================ -->
-
-                <button type="submit">
-                    Tampilkan Preview
-                </button>
-
+                <div class="field">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" rows="5" required minlength="10"></textarea>
+                </div>
+                <button type="submit">Tampilkan Preview</button>
             </form>
+        </section>
 
-
-            <!-- ================================ -->
-            <!-- HASIL PREVIEW -->
-            <!-- ================================ -->
-
-            <div
-                id="previewForm"
-                aria-live="polite">
-            </div>
-
+        <!-- Preview data form -->
+        <section aria-labelledby="preview-title">
+            <h2 id="preview-title">Preview Data</h2>
+            <pre id="preview-form" aria-live="polite">Data form akan muncul setelah tombol dikirim.</pre>
         </section>
 
     </main>
 
-
-    <!-- ================================ -->
-    <!-- FOOTER -->
-    <!-- ================================ -->
-
+    <!-- Footer -->
     <footer class="site-footer">
-
-        <p>
-            &copy; 2026 Kopi Nusa.
-            Semua hak dilindungi.
-        </p>
-
+        <p>&copy; 2026 Kopi Nusa. Semua hak dilindungi.</p>
     </footer>
 
-
-    <!-- Menghubungkan HTML dengan JavaScript -->
-    <script src="JS/script.js"></script>
-
 </body>
-
 </html>

@@ -1,41 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-
-    <!-- Supaya tampilan menyesuaikan ukuran layar -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Judul yang muncul pada tab browser -->
-    <title>Tentang Kami - Kopi Nusa</title>
-
-    <!-- Menghubungkan halaman dengan file CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tentang Kopi Nusa - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <!-- Link untuk lompat ke konten utama -->
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
 
-    <!-- Skip link untuk membantu pengguna keyboard -->
-    <a class="skip-link" href="#konten-utama">
-        Lewati ke konten utama
-    </a>
-
-    <!-- Header dan navigasi website -->
+    <!-- Header dan navigasi -->
     <header class="site-header">
-
-        <!-- Nama brand yang mengarah ke halaman utama -->
-        <div class="brand">
-            <a href="index.html">
-                Kopi Nusa
-            </a>
-        </div>
-
-        <!-- Navigasi utama website -->
-        <nav aria-label="Navigasi utama">
-            <ul class="nav-list">
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">Kopi Nusa</a>
+            <ul>
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="tentang.html" aria-current="page">Tentang Kami</a></li>
+                <li><a aria-current="page" href="tentang.html">Tentang Kami</a></li>
                 <li><a href="produk.html">Produk</a></li>
                 <li><a href="galeri.html">Galeri</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
@@ -43,131 +24,58 @@
         </nav>
     </header>
 
-    <!-- Isi utama halaman Tentang Kami -->
-    <main id="konten-utama" class="page">
+    <main id="konten" class="page">
 
-        <!-- Banner Tentang Kopi Nusa -->
-        <section class="about-hero" aria-labelledby="about-hero-title">
-
-            <img
-                class="about-hero-image"
-                src="assets/images/suasana-kopi-nusa.jpg"
-                width="2048"
-                height="683"
-                alt=""
-                loading="lazy"
-            >
-
-            <div class="about-hero-content">
-
-                <p class="about-eyebrow">
-                    KOPI NUSA
-                </p>
-
-                <h1 id="about-hero-title">
-                    Rasa Lokal, Cerita Kita
-                </h1>
-
-                <p class="about-hero-description">
-                    Teman terbaik untuk setiap langkahmu.
-                    Dari biji pilihan, untuk momen yang lebih bermakna.
-                </p>
-
-                <p class="about-hero-highlight">
-                    100% Kopi Lokal · Rasa Berkualitas · Dukung Petani Lokal
-                </p>
-
+        <!-- Banner -->
+        <section class="hero hero-banner" aria-labelledby="tentang-title">
+            <img class="banner-image" src="assets/images/suasana-kopi-nusa.jpg" width="2075" height="758" loading="lazy" alt="Meja kayu di Kopi Nusa dengan secangkir kopi, toples biji kopi, dan kemasan kopi">
+            <div class="hero-content">
+                <p class="eyebrow">Cerita Usaha</p>
+                <h1 id="tentang-title">Rasa Lokal, Cerita Kita</h1>
+                <p>Teman terbaik untuk setiap langkahmu. Dari biji pilihan, untuk momen yang lebih bermakna.</p>
+                <p class="hero-highlight">100% Kopi Lokal &middot; Rasa Berkualitas &middot; Dukung Petani Lokal</p>
             </div>
-
         </section>
 
-        <!-- Cerita atau latar belakang Kopi Nusa -->
-        <section
-            class="section"
-            aria-labelledby="cerita-title">
-
-            <h2 id="cerita-title">
-                Cerita Kopi Nusa
-            </h2>
-
+        <!-- Cerita -->
+        <section class="section" aria-labelledby="cerita-title">
+            <h2 id="cerita-title">Cerita Kopi Nusa</h2>
             <p>
-                Kopi Nusa hadir untuk memperkenalkan kopi lokal
-                dengan rasa yang mudah dinikmati dan cocok untuk
-                menemani belajar, bekerja, maupun berdiskusi.
+                Kopi Nusa hadir untuk memperkenalkan kopi lokal dengan rasa yang
+                mudah dinikmati dan cocok untuk menemani belajar, bekerja,
+                maupun berdiskusi.
             </p>
-
         </section>
 
-        <!-- Nilai dan komitmen Kopi Nusa -->
-        <section
-            class="section"
-            aria-labelledby="nilai-title">
-
-            <h2 id="nilai-title">
-                Nilai dan Produk:
-            </h2>
-
-            <!-- 1. Komitmen terhadap kopi lokal -->
-            <article>
-
-                <h3>
-                    1. Komitmen pada Kopi Lokal
-                </h3>
-
-                <p>
-                    Kopi Nusa berusaha menghadirkan produk kopi
-                    lokal dengan cita rasa yang nyaman dinikmati
-                    oleh berbagai kalangan.
-                </p>
-
-            </article>
-
-            <!-- 2. Informasi pilihan produk -->
-            <article>
-
-                <h3>
-                    2. Pilihan Produk
-                </h3>
-
-                <p>
-                    Kopi Nusa menyediakan berbagai pilihan minuman,
-                    seperti Kopi Garwo Signature, Americano Peach,
-                    dan Mojito yang cocok dinikmati saat belajar,
-                    bekerja, maupun bersantai.
-                </p>
-
-            </article>
-
-            <!-- 3. Komitmen terhadap kualitas dan kenyamanan -->
-            <article>
-
-                <h3>
-                    3. Kualitas dan Kenyamanan
-                </h3>
-
-                <p>
-                    Kami berusaha menjaga kualitas minuman dan
-                    memberikan kenyamanan kepada pelanggan agar
-                    setiap produk bisa dinikmati dalam berbagai
-                    suasana.
-                </p>
-
-            </article>
-
+        <!-- Nilai usaha -->
+        <section class="section" aria-labelledby="nilai-title">
+            <h2 id="nilai-title">Filosofi Kopi Nusa</h2>
+            <p>Lebih dari sekadar kopi, kami menghadirkan rasa, kualitas, dan kehangatan dalam setiap sajian.</p>
+            <div class="product-grid">
+                <article class="product-card">
+                    <span class="product-badge">01</span>
+                    <h3>Cita Rasa Nusantara</h3>
+                    <p>Menghadirkan kekayaan rasa kopi lokal yang khas untuk menemani setiap momen berharga dalam keseharianmu.</p>
+                </article>
+                <article class="product-card">
+                    <span class="product-badge">02</span>
+                    <h3>Diracik dengan Hati</h3>
+                    <p>Setiap sajian dibuat dengan perhatian pada rasa dan kualitas, agar setiap tegukan terasa lebih istimewa.</p>
+                </article>
+                <article class="product-card">
+                    <span class="product-badge">03</span>
+                    <h3>Hangat dalam Kebersamaan</h3>
+                    <p>Menciptakan suasana yang nyaman untuk berbagi cerita, mencari inspirasi, dan menikmati waktu bersama.</p>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer website -->
+    <!-- Footer -->
     <footer class="site-footer">
-
-        <p>
-            &copy; 2026 Kopi Nusa.
-            Semua hak dilindungi.
-        </p>
-
+        <p>&copy; 2026 Kopi Nusa. Semua hak dilindungi.</p>
     </footer>
 
 </body>
-
 </html>

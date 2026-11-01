@@ -1,369 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Judul halaman -->
-    <title>Produk - Kopi Nusa</title>
-
-    <!-- Menghubungkan halaman dengan CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produk Kopi Nusa - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <!-- Link untuk lompat ke konten utama -->
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
 
-    <!-- Skip link untuk membantu pengguna keyboard -->
-    <a class="skip-link" href="#konten-utama">
-        Lewati ke konten utama
-    </a>
-
-
-    <!-- Header dan navigasi utama -->
+    <!-- Header dan navigasi -->
     <header class="site-header">
-
-        <!-- Nama brand -->
-        <div class="brand">
-            <a href="index.html">
-                Kopi Nusa
-            </a>
-        </div>
-
-
-        <!-- Navigasi utama website -->
-        <nav aria-label="Navigasi utama">
-            <ul class="nav-list">
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">Kopi Nusa</a>
+            <ul>
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="produk.html" aria-current="page">Produk</a></li>
+                <li><a aria-current="page" href="produk.html">Produk</a></li>
                 <li><a href="galeri.html">Galeri</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
+    <main id="konten" class="page">
 
-    <!-- Isi utama halaman Produk -->
-    <main id="konten-utama" class="page">
-
-        <!-- Judul halaman katalog -->
-        <section class="section" aria-labelledby="produk-title">
-
-            <h1 id="produk-title">
-                Produk Kopi Nusa
-            </h1>
-
-
-            <!-- Daftar produk -->
-            <div class="products">
-
-
-                <!-- Produk Kopi Garwo Signature -->
-                <article class="product-card">
-
-                    <figure>
-
-                        <img
-                            src="IMG/kopi-garwo.jpg"
-                            alt="Segelas Kopi Garwo Signature dengan warna kopi susu"
-                            width="1536"
-                            height="1024"
-                            loading="lazy">
-
-                        <figcaption>
-                            Kopi Garwo Signature — Rp20.000
-                        </figcaption>
-
-                    </figure>
-
-                </article>
-
-
-                <!-- Produk Americano Peach -->
-                <article class="product-card">
-
-                    <figure>
-
-                        <img
-                            src="IMG/americano-peach.jpg"
-                            alt="Minuman Americano Peach dengan warna oranye dan es batu"
-                            width="1536"
-                            height="1024"
-                            loading="lazy">
-
-                        <figcaption>
-                            Americano Peach — Rp22.000
-                        </figcaption>
-
-                    </figure>
-
-                </article>
-
-
-                <!-- Produk baru Mojito -->
-                <article class="product-card">
-
-                    <figure>
-
-                        <img
-                            src="IMG/mojito.jpg"
-                            alt="Minuman mojito segar dengan irisan jeruk nipis, daun mint, dan es batu"
-                            width="1536"
-                            height="1024"
-                            loading="lazy">
-
-                        <figcaption>
-                            Mojito — Rp18.000
-                        </figcaption>
-
-                    </figure>
-
-                </article>
-
+        <!-- Banner -->
+        <section class="hero hero-banner" aria-labelledby="produk-title">
+            <img class="banner-image" src="assets/images/etalase-produk.jpg" width="1536" height="1024" alt="Etalase Kopi Nusa berisi kemasan kopi Arabika, Robusta, dan Blend, toples biji kopi, serta secangkir kopi">
+            <div class="hero-content">
+                <h1 id="produk-title">Produk Kopi Nusa</h1>
+                <p>Pilih produk sesuai kebutuhan seduh harian, kantor, atau hadiah.</p>
             </div>
-
         </section>
 
+        <!-- Kategori -->
+        <section class="section" aria-labelledby="kategori-title">
+            <h2 id="kategori-title">Kategori Produk</h2>
+            <ul>
+                <li>Paket rumahan</li>
+                <li>Paket kantor</li>
+                <li>Paket reseller</li>
+            </ul>
+        </section>
 
-        <!-- Bagian produk pilihan -->
-        <section class="section" aria-labelledby="produk-pilihan-title">
-
-            <h2 id="produk-pilihan-title">
-                Produk yang Bisa Anda Pilih
-            </h2>
-
-            <!-- Menampung tiga kartu produk -->
+        <!-- Minuman favorit -->
+        <section class="section" aria-labelledby="minuman-title">
+            <h2 id="minuman-title">Minuman Favorit Kopi Nusa</h2>
             <div class="product-grid">
-
-                <!-- Produk pertama -->
-                <article class="product-card">
-
-                    <span class="product-badge">
-                        Terlaris
-                    </span>
-
-                    <h3>
-                        Kopi Tubruk Signature
-                    </h3>
-
-                    <p>
-                        Karakter cokelat dan kacang dengan body yang kuat.
-                    </p>
-
-                    <p class="price">
-                        Rp45.000
-                    </p>
-
-                    <!-- Mengelompokkan tautan produk -->
-                    <div class="card-actions">
-
-                        <a class="button" href="kontak.html">
-                            Tanya produk
-                        </a>
-
-                        <a href="#harga-title">
-                            Lihat tabel harga
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Produk kedua -->
-                <article class="product-card">
-
-                    <span class="product-badge">
-                        Segar
-                    </span>
-
-                    <h3>
-                        Cold Brew Aren
-                    </h3>
-
-                    <p>
-                        Kopi dingin dengan rasa ringan dan manis aren seimbang.
-                    </p>
-
-                    <p class="price">
-                        Rp22.000
-                    </p>
-
-                    <div class="card-actions">
-
-                        <a class="button" href="kontak.html">
-                            Tanya produk
-                        </a>
-
-                        <a href="#harga-title">
-                            Lihat tabel harga
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Produk ketiga -->
-                <article class="product-card">
-
-                    <span class="product-badge">
-                        Hemat
-                    </span>
-
-                    <h3>
-                        Paket Seduh Rumahan
-                    </h3>
-
-                    <p>
-                        Kopi 250 gram, filter, dan panduan seduh untuk pemula.
-                    </p>
-
-                    <p class="price">
-                        Rp75.000
-                    </p>
-
-                    <div class="card-actions">
-
-                        <a class="button" href="kontak.html">
-                            Tanya produk
-                        </a>
-
-                        <a href="#harga-title">
-                            Lihat tabel harga
-                        </a>
-
-                    </div>
-
-                </article>
-
+                <figure class="media-card">
+                    <img src="assets/images/kopi-garwo.jpg" width="1536" height="1024" loading="lazy" alt="Segelas Kopi Garwo Signature dengan warna kopi susu">
+                    <figcaption>
+                        <strong>Kopi Garwo Signature</strong>
+                        <span class="price">Rp20.000</span>
+                    </figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="assets/images/americano-peach.jpg" width="1536" height="1024" loading="lazy" alt="Minuman Americano Peach dengan warna oranye dan es batu">
+                    <figcaption>
+                        <strong>Americano Peach</strong>
+                        <span class="price">Rp22.000</span>
+                    </figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="assets/images/mojito.jpg" width="1536" height="1024" loading="lazy" alt="Minuman mojito segar dengan irisan jeruk nipis, daun mint, dan es batu">
+                    <figcaption>
+                        <strong>Mojito</strong>
+                        <span class="price">Rp18.000</span>
+                    </figcaption>
+                </figure>
             </div>
-
         </section>
 
-
-        <!-- Tabel katalog produk -->
-        <section class="section" aria-labelledby="tabel-produk-title">
-
-            <h2 id="tabel-produk-title">
-                <span id="harga-title">Daftar Harga Produk</span>
-            </h2>
-
-
-            <!-- Pembungkus agar tabel responsif di layar kecil -->
-            <div class="table-scroll"
-                 role="region"
-                 aria-label="Daftar harga produk"
-                 tabindex="0">
-
-                <table>
-
-                    <!-- Judul tabel -->
-                    <caption>
-                        Daftar produk dan harga Kopi Nusa
-                    </caption>
-
-
-                    <!-- Bagian kepala tabel -->
-                    <thead>
-
-                        <tr>
-
-                            <th scope="col">
-                                Produk
-                            </th>
-
-                            <th scope="col">
-                                Harga
-                            </th>
-
-                            <th scope="col">
-                                Keterangan
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <!-- Isi tabel -->
-                    <tbody>
-
-                        <tr>
-
-                            <td>
-                                Kopi Garwo Signature
-                            </td>
-
-                            <td>
-                                Rp20.000
-                            </td>
-
-                            <td>
-                                Kopi dengan cita rasa lembut
-                                dan cocok untuk menemani aktivitas.
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Americano Peach
-                            </td>
-
-                            <td>
-                                Rp22.000
-                            </td>
-
-                            <td>
-                                Minuman kopi dengan perpaduan
-                                rasa americano dan peach.
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Mojito
-                            </td>
-
-                            <td>
-                                Rp18.000
-                            </td>
-
-                            <td>
-                                Minuman segar dengan perpaduan
-                                jeruk nipis, daun mint, dan es.
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
+        <!-- Produk pilihan -->
+        <section class="section" aria-labelledby="produk-pilihan-title">
+            <h2 id="produk-pilihan-title">Produk Pilihan</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <span class="product-badge">Terlaris</span>
+                    <h3>Kopi Tubruk Signature</h3>
+                    <p>Karakter cokelat dan kacang dengan body yang kuat.</p>
+                    <p class="price">Rp45.000</p>
+                    <div class="card-actions">
+                        <a class="button" href="kontak.html">Tanya produk</a>
+                        <a href="#harga-title">Lihat tabel harga</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <span class="product-badge">Segar</span>
+                    <h3>Cold Brew Aren</h3>
+                    <p>Kopi dingin dengan rasa ringan dan manis aren seimbang.</p>
+                    <p class="price">Rp22.000</p>
+                    <div class="card-actions">
+                        <a class="button" href="kontak.html">Tanya produk</a>
+                        <a href="#harga-title">Lihat tabel harga</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <span class="product-badge">Hemat</span>
+                    <h3>Paket Seduh Rumahan</h3>
+                    <p>Kopi 250 gram, filter, dan panduan seduh untuk pemula.</p>
+                    <p class="price">Rp75.000</p>
+                    <div class="card-actions">
+                        <a class="button" href="kontak.html">Tanya produk</a>
+                        <a href="#harga-title">Lihat tabel harga</a>
+                    </div>
+                </article>
             </div>
+        </section>
 
+        <!-- Tabel harga -->
+        <section class="section" aria-labelledby="harga-title">
+            <h2 id="harga-title">Daftar Harga</h2>
+            <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
+                <table>
+                    <caption id="daftar-harga-caption">Daftar harga produk Kopi Nusa</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Produk</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Kopi Garwo Signature</th>
+                            <td>Rp20.000</td>
+                            <td>Kopi dengan cita rasa lembut dan cocok untuk menemani aktivitas.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Americano Peach</th>
+                            <td>Rp22.000</td>
+                            <td>Minuman kopi dengan perpaduan rasa americano dan peach.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mojito</th>
+                            <td>Rp18.000</td>
+                            <td>Minuman segar dengan perpaduan jeruk nipis, daun mint, dan es.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kopi Tubruk Signature</th>
+                            <td>Rp45.000</td>
+                            <td>Karakter cokelat dan kacang dengan body yang kuat.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cold Brew Aren</th>
+                            <td>Rp22.000</td>
+                            <td>Kopi dingin dengan rasa ringan dan manis aren seimbang.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Paket Seduh Rumahan</th>
+                            <td>Rp75.000</td>
+                            <td>Kopi 250 gram, filter, dan panduan seduh untuk pemula.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
     </main>
 
-
-    <!-- Footer website -->
+    <!-- Footer -->
     <footer class="site-footer">
-
-        <p>
-            &copy; 2026 Kopi Nusa.
-            Semua hak dilindungi.
-        </p>
-
+        <p>&copy; 2026 Kopi Nusa. Semua hak dilindungi.</p>
     </footer>
 
 </body>
-
 </html>
