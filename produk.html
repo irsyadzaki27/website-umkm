@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Produk Kopi Nusa - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <!-- Link untuk lompat ke konten utama -->
@@ -43,6 +44,14 @@
                 <li>Paket kantor</li>
                 <li>Paket reseller</li>
             </ul>
+        </section>
+
+        <!-- Produk dari data JavaScipt (P09) -->
+        <section class="section" aria-labelledby="produk-dinamis-title">
+            <p class="eyebrow">Katalog Kopi Nusa</p>
+            <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
+            <p id="produk-ringkasan">Data produk akan dimuat melalui JavaScript.</p>
+            <div id="produk-dinamis" class="js-product-grid"></div>
         </section>
 
         <!-- Minuman favorit -->

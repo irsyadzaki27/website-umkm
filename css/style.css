@@ -516,6 +516,50 @@ legend {
     border-radius: var(--radius-sm);
 }
 
+/* ---------- Output JavaScript (P09) ---------- */
+.js-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space-4);
+}
+
+.js-product-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.js-product-card h3,
+.js-product-card p {
+    margin: 0;
+}
+
+.stock-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-block-start: var(--space-1);
+    padding: 0.25rem 0.6rem;
+    color: #166534;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: #dcfce7;
+    border-radius: 999px;
+}
+
+.stock-badge.warning {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.stock-badge.empty {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
 /* ---------- Responsive (P07, mobile-first) ---------- */
 @media (min-width: 42rem) {
     .nav ul {
