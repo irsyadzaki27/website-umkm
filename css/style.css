@@ -538,6 +538,15 @@ legend {
     margin: 0;
 }
 
+.category-note {
+    color: var(--color-muted);
+}
+
+#produk-unggulan {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 .stock-badge {
     display: inline-flex;
     align-self: flex-start;
