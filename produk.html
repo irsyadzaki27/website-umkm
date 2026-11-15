@@ -6,6 +6,7 @@
     <title>Produk Kopi Nusa - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
+    <script src="js/nav.js" defer></script>
 </head>
 <body>
     <!-- Link untuk lompat ke konten utama -->
@@ -15,7 +16,11 @@
     <header class="site-header">
         <nav class="nav" aria-label="Navigasi utama">
             <a class="brand" href="index.html">Kopi Nusa</a>
-            <ul>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-utama">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+                Menu
+            </button>
+            <ul id="menu-utama">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
                 <li><a aria-current="page" href="produk.html">Produk</a></li>
@@ -52,6 +57,24 @@
             <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
             <p id="produk-ringkasan">Data produk akan dimuat melalui JavaScript.</p>
             <p id="produk-unggulan">Produk unggulan akan ditentukan melalui JavaScript.</p>
+
+            <!-- Tombol filter kategori -->
+            <div class="filter-bar" role="group" aria-label="Filter kategori produk">
+                <button type="button" class="filter-button is-active" data-filter="Semua" aria-pressed="true">Semua</button>
+                <button type="button" class="filter-button" data-filter="Minuman" aria-pressed="false">Minuman</button>
+                <button type="button" class="filter-button" data-filter="Kopi" aria-pressed="false">Kopi</button>
+                <button type="button" class="filter-button" data-filter="Bundling" aria-pressed="false">Bundling</button>
+                <button type="button" class="filter-button" data-filter="Makanan" aria-pressed="false">Makanan</button>
+            </div>
+
+            <!-- Pengayaan: tombol filter stok -->
+            <div class="filter-bar" role="group" aria-label="Filter stok produk">
+                <button type="button" class="filter-button is-active" data-stok="Semua" aria-pressed="true">Semua stok</button>
+                <button type="button" class="filter-button" data-stok="Tersedia" aria-pressed="false">Tersedia</button>
+                <button type="button" class="filter-button" data-stok="Stok terbatas" aria-pressed="false">Stok terbatas</button>
+                <button type="button" class="filter-button" data-stok="Habis" aria-pressed="false">Habis</button>
+            </div>
+
             <div id="produk-dinamis" class="js-product-grid"></div>
         </section>
 
