@@ -8,6 +8,7 @@
     <script src="js/app.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/form.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
 </head>
 <body>
     <!-- Link untuk lompat ke konten utama -->
@@ -16,7 +17,21 @@
     <!-- Header dan navigasi -->
     <header class="site-header">
         <nav class="nav" aria-label="Navigasi utama">
-            <a class="brand" href="index.html">Kopi Nusa</a>
+            <a class="brand" href="index.html">
+                <!-- Logo biji kopi dengan tunas daun (dekoratif, nama brand ada di teks) -->
+                 <svg class="brand-logo" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+                    <circle cx="24" cy="24" r="24" fill="#fffdf5"/>
+                    <!-- Biji kopi -->
+                    <g transform="rotate(-35 24 26)">
+                        <ellipse cx="24" cy="26" rx="10" ry="14" fill="#8b5e3c"/>
+                        <path d="M24 12C18 19 30 24 24 26C18 28 30 33 24 40" fill="none" stroke="#fffdf5" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Tunas daun -->
+                     <path d="M31 16c0-5 3.5-8 9-8 0 5.5-3.5 9-9 8z" fill="#24452f"/>
+                     <path d="M32 15c2-2 4-4 6-5" fill="none" stroke="#fffdf5" stroke-width="1" stroke-linecap="round"/>
+                    </svg>
+                    <span>Kopi Nusa</span>
+                </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-utama">
                 <span class="nav-toggle-icon" aria-hidden="true"></span>
                 Menu
@@ -45,55 +60,111 @@
             </ul>
         </section>
 
-        <!-- Form kontak -->
+        <!-- Form kontak (P12: novalidate supaya pesan error dikendalikan JavaScript) -->
         <section aria-labelledby="form-title">
             <h2 id="form-title">Form Kontak</h2>
-            <form id="form-kontak" action="#" method="post">
+            <p>Semua bagian wajib diisi. Data hanya ditampilkan sebagai preview, tidak dikirim ke server.</p>
+            <form id="form-kontak" action="#" method="post" novalidate>
                 <div class="field">
                     <label for="nama">Nama lengkap</label>
-                    <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3">
+                    <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3" aria-describedby="nama-error">
+                    <p id="nama-error" class="field-error" aria-live="polite"></p>
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
+                    <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                    <p id="email-error" class="field-error" aria-live="polite"></p>
                 </div>
                 <div class="field">
                     <label for="whatsapp">Nomor WhatsApp</label>
-                    <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" required>
+                    <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" required pattern="08[0-9]{8,11}" aria-describedby="whatsapp-hint whatsapp-error">
+                    <p id="whatsapp-hint" class="field-hint">Contoh: 081234567890 (10-13 digit, diawali 08).</p>
+                    <p id="whatsapp-error" class="field-error" aria-live="polite"></p>
                 </div>
                 <div class="field">
                     <label for="paket">Paket yang diminati</label>
-                    <select id="paket" name="paket" required>
+                    <select id="paket" name="paket" required aria-describedby="paket-error">
                         <option value="">Pilih paket</option>
                         <option value="rumahan">Paket rumahan</option>
                         <option value="kantor">Paket kantor</option>
                         <option value="reseller">Paket reseller</option>
                     </select>
+                    <p id="paket-error" class="field-error" aria-live="polite"></p>
                 </div>
-                <fieldset>
+                <fieldset aria-describedby="topik-error">
                     <legend>Topik pertanyaan</legend>
                     <label><input type="radio" name="topik" value="produk" required> Informasi produk</label>
                     <label><input type="radio" name="topik" value="pesanan"> Status pesanan</label>
                     <label><input type="radio" name="topik" value="kerja-sama"> Kerja sama</label>
                 </fieldset>
-                <fieldset>
+                <p id="topik-error" class="field-error" aria-live="polite"></p>
+                <fieldset aria-describedby="waktu-error">
                     <legend>Waktu yang nyaman untuk dihubungi</legend>
                     <label><input type="radio" name="waktu" value="Pagi (08.00-12.00)" required> Pagi (08.00-12.00)</label>
                     <label><input type="radio" name="waktu" value="Siang (12.00-17.00)"> Siang (12.00-17.00)</label>
                     <label><input type="radio" name="waktu" value="Malam (17.00-22.00)"> Malam (17.00-22.00)</label>
                 </fieldset>
+                <p id="waktu-error" class="field-error" aria-live="polite"></p>
                 <div class="field">
                     <label for="pesan">Pesan</label>
-                    <textarea id="pesan" name="pesan" rows="5" required minlength="10"></textarea>
+                    <textarea id="pesan" name="pesan" rows="5" required minlength="20" aria-describedby="pesan-hint pesan-error"></textarea>
+                    <p id="pesan-hint" class="field-hint">Minimal 20 karakter.</p>
+                    <p id="pesan-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field field-check">
+                    <label for="setuju">
+                        <input id="setuju" name="setuju" type="checkbox" value="ya" required aria-describedby="setuju-error">
+                        Saya setuju data pada form ini ditampilkan sebagai preview (data dummy).
+                    </label>
+                    <p id="setuju-error" class="field-error" aria-live="polite"></p>
                 </div>
                 <button type="submit">Tampilkan Preview</button>
+                <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
             </form>
         </section>
 
         <!-- Preview data form -->
         <section aria-labelledby="preview-title">
             <h2 id="preview-title">Preview Data</h2>
-            <pre id="preview-form" aria-live="polite">Data form akan muncul setelah tombol dikirim.</pre>
+            <pre id="preview-form" aria-live="polite">Data form akan muncul setelah semua bagian valid.</pre>
+        </section>
+
+        <!-- Preferensi lokal (P12: disimpan di localStorage browser ini) -->
+        <section class="section" aria-labelledby="pref-title">
+            <h2 id="pref-title">Preferensi Anda</h2>
+            <div class="panel">
+                <p>Paket dan topik diambil dari form di atas. Pilih juga cara kami menghubungi Anda, lalu simpan agar terisi otomatis saat halaman dibuka lagi.</p>
+                <fieldset>
+                    <legend>Channel kontak</legend>
+                    <label><input type="checkbox" value="email" data-channel> Email</label>
+                    <label><input type="checkbox" value="whatsapp" data-channel> WhatsApp</label>
+                </fieldset>
+                <div class="panel-actions">
+                    <button type="button" id="simpan-preferensi">Simpan Preferensi</button>
+                    <button type="button" id="hapus-preferensi" class="button-secondary">Hapus Preferensi</button>
+                </div>
+                <p id="status-preferensi" class="form-feedback" aria-live="polite">Belum ada preferensi tersimpan.</p>
+            </div>
+        </section>
+
+        <!-- Newsletter ringan (P12: ingat email terakhir) -->
+        <section class="section" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title">Kabar Kopi Nusa</h2>
+            <div class="panel">
+                <p>Dapatkan info menu baru dan promo. Ini simulasi: email hanya disimpan di browser ini.</p>
+                <form id="form-newsletter" class="form-inline" novalidate>
+                    <div class="field">
+                        <label for="newsletter-email">Email</label>
+                        <input id="newsletter-email" name="newsletter-email" type="email" autocomplete="email" required aria-describedby="newsletter-email-error">
+                        <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+                    </div>
+                    <div class="panel-actions">
+                        <button type="submit">Berlangganan</button>
+                        <button type="button" id="newsletter-hapus" class="button-secondary">Hapus Email Tersimpan</button>
+                    </div>
+                </form>
+                <p id="newsletter-status" class="form-feedback" aria-live="polite"></p>
+            </div>
         </section>
 
     </main>

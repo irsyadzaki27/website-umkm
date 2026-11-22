@@ -139,10 +139,17 @@ li {
 }
 
 .brand {
+    display: inline-flex;
+    gap: var(--space-2);
+    align-items: center;
     color: var(--color-on-primary);
     font-size: 1.5rem;
     font-weight: 800;
     text-decoration: none;
+}
+
+.brand-logo {
+    flex-shrink: 0;
 }
 
 .brand:hover {
@@ -597,6 +604,106 @@ legend {
     border-radius: var(--radius-sm);
 }
 
+/* ---------- Validasi form dan preferensi (P12) ---------- */
+.field-hint {
+    margin: var(--space-1) 0 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.field-error,
+.form-feedback {
+    margin: 0;
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+.field-error {
+    min-height: 1.4rem;
+}
+
+/* Pesan error grup radio berada di luar .field, beri jarak ke elemen berikutnya */
+fieldset + .field-error {
+    margin-bottom: var(--space-3);
+}
+
+/* Tanda peringatan supaya error tidak hanya dibedakan lewat warna */
+.field-error:not(:empty)::before {
+    content: "\26A0\FE0F  ";
+}
+
+.form-feedback {
+    margin-top: var(--space-3);
+}
+
+.form-feedback.success {
+    color: #166534;
+}
+
+/* Kontrol yang ditandai salah oleh JavaScript */
+[aria-invalid="true"],
+.field [aria-invalid="true"] {
+    border-color: #b91c1c;
+    box-shadow: 0 0 0 3px rgb(185 28 28 / 15%);
+}
+
+fieldset:has([aria-invalid="true"]) {
+    border-color: #b91c1c;
+}
+
+.field-check label {
+    display: flex;
+    gap: var(--space-2);
+    align-items: flex-start;
+    font-weight: 400;
+}
+
+/* Panel preferensi dan newsletter */
+.panel {
+    padding: var(--space-3);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.panel > p:first-child {
+    margin-top: 0;
+}
+
+.panel-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.panel .form-feedback {
+    color: var(--color-muted);
+}
+
+.panel .form-feedback.success {
+    color: #166534;
+}
+
+.form-inline {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.button-secondary {
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.button-secondary:hover {
+    color: var(--color-text);
+    background: var(--color-surface-soft);
+    border-color: var(--color-primary);
+}
+
 /* ---------- Output JavaScript (P09) ---------- */
 .js-product-grid {
     display: grid;
@@ -604,6 +711,7 @@ legend {
     gap: var(--space-4);
 }
 
+/*gaya kartu produk*/
 .js-product-card {
     display: flex;
     flex-direction: column;
@@ -635,6 +743,7 @@ legend {
     margin-block: var(--space-3) var(--space-4);
 }
 
+/* tampilan tombol biasa*/
 .filter-button {
     padding: var(--space-1) var(--space-3);
     color: var(--color-text);
@@ -649,6 +758,7 @@ legend {
     border-color: var(--color-primary);
 }
 
+/*tampilan tombol yang aktif*/
 .filter-button.is-active,
 .filter-button.is-active:hover {
     color: var(--color-on-primary);
@@ -656,6 +766,7 @@ legend {
     border-color: var(--color-primary);
 }
 
+/* kotak pesan saat hasil kosong*/
 .empty-state {
     grid-column: 1 / -1;
     padding: var(--space-3);
